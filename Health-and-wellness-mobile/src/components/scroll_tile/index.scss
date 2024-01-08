@@ -4,9 +4,15 @@
     border: 1px solid $panel;
     border-radius: $border-radius-lg;
     margin-top: 0.5em;
-    background-color: $primary;
+    background-color: $primary2;
     padding: 0.7em;
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // Add bottom border drop shadow
+    box-shadow: inset 0px -10px 10px -10px rgba(225, 222, 222, 0.75);
+    //height: 75px; //defining a specific height impacts faq
 }
 
 .scroll-tile--fill {
@@ -14,13 +20,15 @@
 }
 
 .scroll-tile__button {
-    @include font-header(16px);
+    @include font-header2(16px);
+    text-align: left;
 }
 
 .scroll-tile__subscript {
-    @include font-regular(12px);
+    @include font-regular2(12px);
     text-transform: uppercase;
     font-weight: 200;
+    text-align: left;
 }
 
 .scroll-tile__dropdown {
@@ -34,18 +42,35 @@
 
 
 .scroll-tile__home--title {
-    @include font-header();
-    text-transform: uppercase;
+    @include font-header2();
+    // text-transform: uppercase;
 }
 
 .scroll-tile--feel-title {
-  @include font-header();
-  font-weight: 800;
-    text-transform: uppercase;
+    @include font-header();
+    font-weight: 800;
+    // text-transform: uppercase;
 }
 
 .scroll-tile__modal {
     height: 100%;
     overflow: auto;
     padding: 0 1em;
+}
+
+.scrolltile-button {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    float: left;
+}
+
+// .scroll-tile .genericButton {
+//     width: auto !important;
+//     padding: 10px 0px 0px 0px;
+// }
+
+.scroll-tile__button-container {
+    display: flex;
+    align-items: center;
 }

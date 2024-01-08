@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { IonButton } from '@ionic/react'
+import { IonImg } from '@ionic/react';
 import { classNames } from '../../utils/system'
 
 import './index.scss' //scss import
+import emergencyIcon from '../../assets/icons/emergency.png';
 
-export type ButtonType = 'icon' | 'standard' | 'tabs'
+export type ButtonType = 'icon' | 'standard' | 'tabs' | 'emergency'
 export type ButtonColor = 'primary' | 'secondary' | 'danger'
 export type ButtonFill = 'solid' | 'outline' | 'clear'
 
@@ -39,6 +41,7 @@ export default class Button extends React.Component<ButtonProps> {
             { name: 'button-wrapper__outline', include: fill === 'outline'}
             ])
 
+
         const fillVal = this.props.fill ? this.props.fill : "solid"
 
         if (type === 'standard') {
@@ -46,6 +49,17 @@ export default class Button extends React.Component<ButtonProps> {
                 <div className={buttonClass}>
                     <IonButton onClick={onClick} color={color} fill={fillVal}>
                         <span>{this.props.children}</span>
+                    </IonButton>
+                </div >
+            )
+        }
+
+        else if (type === 'emergency') {
+            return (
+                <div className={buttonClass}>
+                    <IonButton onClick={onClick} fill={fillVal} color={'danger'}>
+                    <IonImg className='emergencyIcon' src={emergencyIcon} />
+                        <span className='emergencyText'>{this.props.children}</span>
                     </IonButton>
                 </div >
             )

@@ -12,8 +12,8 @@
 
 .button-wrapper__fill-width {
     width: 100%;
-    padding: $pad-lg 0 ;
-    
+    padding: $pad-lg 0;
+
     & .button {
         width: 100%;
     }
@@ -26,4 +26,26 @@
 
 .button-wrapper__emergency {
     background-color: red;
+}
+
+ion-button {
+    --border-radius: 20px;
+}
+
+.view-emergency .button-wrapper ion-button {
+    height: 75px;
+}
+
+.view-emergency .button-wrapper .emergencyIcon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+}
+
+.emergencyText {
+    font-size: 17px !important;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 10px;
 }

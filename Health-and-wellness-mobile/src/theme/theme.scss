@@ -12,7 +12,9 @@ $scroll-icon: 16px;
 
 //theme-colors
 $primary: #0065A4;
+$primary2: #d9e7ff;
 $primary-text: #fbfef9;
+$primary-text2: #100c0c;
 $secondary: #dff5fb;
 $secondary-text: #fbfef9;
 $view: #fbfef9;
@@ -30,6 +32,11 @@ $border-radius-lg: 14px;
     font-family: Montserrat;
 }
 
+@mixin font-regular2($size: 11px, $lineHeight: 10px) {
+    @include font-regular($size, $lineHeight);
+    color: $primary-text2;
+}
+
 @mixin font-bold($size: 11px, $lineHeight: 10px) {
     @include font-regular($size, $lineHeight);
     font-weight: bold;
@@ -45,6 +52,11 @@ $border-radius-lg: 14px;
     color: $primary-text;
 }
 
+@mixin font-header2($size: 18px, $lineHeight: 25px) {
+    @include font-regular($size, $lineHeight);
+    color: $primary-text2;
+}
+
 @mixin font-sub-header($size: 18px, $lineHeight: 25px) {
     @include font-regular($size, $lineHeight);
     text-align: start;
@@ -53,4 +65,8 @@ $border-radius-lg: 14px;
 @mixin font-description($size: 15px, $lineHeight: 20px) {
     @include font-regular($size, $lineHeight);
     text-align: start;
+}
+
+.video-player ion-img::part(image) {
+    border-radius: 20px;
 }

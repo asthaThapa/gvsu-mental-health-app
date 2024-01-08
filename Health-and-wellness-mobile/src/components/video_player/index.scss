@@ -2,9 +2,9 @@
 
 .video-player {
   position: relative;
-  margin: 0.5em auto;
+  margin: 1em auto;
   display: block;
-  padding: 1em;;
+  // padding: 1em;;
 }
 
 .video-player_play_button {
@@ -16,6 +16,6 @@
   font-size: 64px !important;
 }
 
-.technique-view__modal > .text-block {
+.technique-view__modal>.text-block {
   padding: 0.5em;
 }

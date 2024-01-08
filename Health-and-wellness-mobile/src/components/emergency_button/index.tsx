@@ -11,7 +11,7 @@ export default class EmergencyButton extends React.Component {
 
     public render() {
         return (<>
-            <Button onClick={this.handleOpenModal} fillWidth={true} color="danger">
+            <Button onClick={this.handleOpenModal} fillWidth={true} type="emergency">
                 I have an Emergency
           </Button>
           { this.modalVisible ?

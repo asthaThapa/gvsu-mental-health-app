@@ -11,6 +11,15 @@ import VideoPreview from '../components/video_player';
 import EmergencyButton from '../components/emergency_button';
 import { IonIcon } from '@ionic/react';
 import { arrowBack, arrowDown } from 'ionicons/icons';
+import anxious from '../assets/icons/guide/1.png';
+import depressed from '../assets/icons/guide/2.png';
+import sucidal from '../assets/icons/guide/3.png';
+import threatening from '../assets/icons/guide/4.png';
+import unusalBehavior from '../assets/icons/guide/5.png';
+import otherwise from '../assets/icons/guide/otherwise.png';
+import panic from '../assets/icons/guide/panic.png';
+
+const imageArray = [anxious, depressed, sucidal, threatening, unusalBehavior]
 
 export interface ViewProps {
   store: Store;
@@ -77,6 +86,7 @@ export default class GuideView extends React.Component<ViewProps> {
           enableModal={true}
           key={idx}
           onToggleOpen={this.handleToggleModal(tile)}
+          iconImage={imageArray[idx]}
         >
           <div className="guide-view__modal">
             <TextBlock input={tile.info.description} />
@@ -190,6 +200,7 @@ export default class GuideView extends React.Component<ViewProps> {
         label={tile.header}
         enableModal={true}
         onToggleOpen={this.handleToggleConcernTile}
+        iconImage={otherwise}
       >
         {buttons}
       </ScrollTile>
@@ -258,6 +269,7 @@ export default class GuideView extends React.Component<ViewProps> {
         label={tile.info.body!.header}
         onClick={this.handleToggleBodyOpen(tile)}
         enableDropdown={true}
+        iconImage={panic}
       >
         <div className="faq-view__dropdown">
           <TextBlock input={tile.info.body!.body} />
@@ -393,4 +405,5 @@ export default class GuideView extends React.Component<ViewProps> {
   private onInfinite = (e: CustomEvent<void>) => {
     (e.target as HTMLIonInfiniteScrollElement).complete();
   };
+
 }
