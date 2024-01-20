@@ -1,11 +1,19 @@
 @import '../../theme/theme.scss';
 
-.emergency-modal {
+ion-modal.stack-modal {
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+}
+
+
+.emergency-modal-content {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 0 1.5em;
     overflow: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .emergency-modal__section {
@@ -22,4 +30,18 @@
     margin: $pad-lg 0;
     @include font-description();
     font-weight: 200;
+}
+
+.emergency-phone {
+    width: 50%;
+    margin: auto;
+}
+
+.emergency-modal_card ion-card-header {
+    padding: 0px;
+}
+
+.emergency-modal modal-wrapper {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }

@@ -4,8 +4,12 @@ import Modal from "../modal"
 import Store from "../../stores/store"
 import { EmergencyInfo } from "../../stores/models/data_models"
 import TextBlock from "../text_block"
+import Button from "../button"
+import emergencyIcon from '../../assets/images/emergencyButton/emergency-phone.png';
+import Card from '../card/index';
 
 import "./index.scss"
+import { business } from "ionicons/icons"
 
 export interface Props {
     onToggleVisible: (visible: boolean) => void
@@ -22,8 +26,14 @@ export default class EmergencyModal extends React.Component<Props> {
 
     public render() {
         return (
-            <Modal showModal={true} onToggleModalVisible={this.toggleModal} header="Emergency Support">
-                <div className="emergency-modal">
+            <Modal
+                classname="emergency-modal"
+                showModal={true}
+                onToggleModalVisible={this.toggleModal}
+                header="Emergency Support"
+                sheetModal={true}
+            >
+                <div className="emergency-modal-content">
                     <div>
                         {this.renderBody()}
                     </div>
@@ -43,12 +53,21 @@ export default class EmergencyModal extends React.Component<Props> {
         const during = data.emergencyBusinessHourInfo
         const after = data.emergencyAfterHourInfo
 
+
+        const cardContent = {
+            header: "988",
+            subheader: "Suicide and Crisis Lifeline",
+            description: "Call or text 988 for immediate mental health support.",
+            image: emergencyIcon
+        };
+
         return (
             <>
-                {this.renderDescription()}
-                {this.renderConcerned()}
+                <Card stretch={false} styledComponents={cardContent} customStyle={true}></Card>
                 {this.renderSection(during)}
                 {this.renderSection(after)}
+                {this.renderDescription()}
+                {this.renderConcerned()}
             </>
         )
     }
@@ -93,13 +112,14 @@ export default class EmergencyModal extends React.Component<Props> {
 
     private renderSection(info: EmergencyInfo) {
         return (
-            <div className="emergency-modal__section">
-                <div className="emergency-modal__header">
-                    <span>{info.title}</span>
-                </div>
-                <div>
-                    <TextBlock input={info.body}/>
-                </div>
+            <div className="emergency-modal__">
+                <Button
+                    type="alert"
+                    id={info.id}
+                    buttonHeader={info.title}
+                    buttonContent={info.body}
+                    fillWidth={true} >
+                </Button>
             </div>
         )
     }
