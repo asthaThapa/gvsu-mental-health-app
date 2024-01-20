@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { classNames } from '../../utils/system';
 import VideoPreview from '../video_player';
-import { IonImg } from '@ionic/react';
+import { IonImg, IonCard, IonCardHeader, IonCardContent } from '@ionic/react';
 import anxiety from '../../assets/Anxiety.png';
 import depression from '../../assets/Depression.png';
 import suicide from '../../assets/Suicide.png';
@@ -12,6 +12,27 @@ import './index.scss';
 export interface TextBlockProps {
   input: string;
 }
+
+const ReadMore = ({ children }: any) => {
+  const text = children;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <p className="text">
+      {isReadMore ? text.slice(0, 100) : text}
+      <span
+        onClick={toggleReadMore}
+        className="read-or-hide"
+        style={{ color: "green" }}
+      >
+        {isReadMore ? "...read more" : " show less"}
+      </span>
+    </p>
+  );
+};
+
 
 export default class TextBlock extends React.Component<TextBlockProps> {
   public render() {
@@ -41,6 +62,7 @@ export default class TextBlock extends React.Component<TextBlockProps> {
       let destNum = null;
       let picture = null;
       let header = null;
+      let readMore = null;
 
       if (sec[0] === '-') {
         sec = sec.substr(1);
@@ -87,7 +109,7 @@ export default class TextBlock extends React.Component<TextBlockProps> {
 
       if (sec.includes('[header')) {
         header = (
-          <div className="text-block__bold">
+          <div className="guide-view__modal-subheader">
             {sec.substr(7, sec.indexOf(']') - (sec.indexOf('[') + 7))}
           </div>
         );
@@ -122,7 +144,7 @@ export default class TextBlock extends React.Component<TextBlockProps> {
           {header}
           {link}
           {number}
-          {postLink}
+          {readMore ? <ReadMore>{postLink}</ReadMore> : postLink}
           {video}
         </div>
       );

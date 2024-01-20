@@ -9,3 +9,26 @@
 .card__stretch {
     min-height: 600px;
 }
+
+.emergency-modal_card {
+    background-color: white;
+    box-shadow: none;
+}
+
+.styled-card-components {
+    text-align: center;
+    color: #6a6a6a;
+    font-family: Montserrat;
+}
+
+.styled-card-components .card-header {
+    font-size: 2.25em;
+}
+
+.styled-card-components .card-subheader {
+    font-size: 1.4em;
+}
+
+.styled-card-components .card-description {
+    font-size: 1em;
+}

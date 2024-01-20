@@ -57,34 +57,34 @@ const App: React.FC = () => {
           <IonTabs>
             <IonRouterOutlet>
               <Route path="/home" component={Home} />
-              <Route path="/guide" component={Guide}/>
+              <Route path="/guide" component={Guide} />
               <Route path="/faq" component={FAQ} />
               <Route path="/resources" component={Resources} exact={true} />
               <Route path="/techniques" component={Techniques} />
               <Redirect exact from="/" to="/home" />
             </IonRouterOutlet>
-              <IonTabBar slot="bottom">
-                <IonTabButton tab="Home" href="/home">
-                  <IonIcon icon={home} />
-                  <IonLabel>Home</IonLabel>
-                </IonTabButton>
-                <IonTabButton tab="Guide" href="/guide">
-                  <IonIcon icon={apps} />
-                  <IonLabel>Guide</IonLabel>
-                </IonTabButton>
-                <IonTabButton tab="Techniques" href="/techniques">
-                  <IonIcon icon={aperture} />
-                  <IonLabel>Techniques</IonLabel>
-                </IonTabButton>
-                <IonTabButton tab="FAQ" href="/faq">
-                  <IonIcon icon={help} />
-                  <IonLabel>FAQ</IonLabel>
-                </IonTabButton>
-                <IonTabButton tab="Resources" href="/resources">
-                  <IonIcon icon={square} />
-                  <IonLabel>Resources</IonLabel>
-                </IonTabButton>
-              </IonTabBar>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="Home" href="/home">
+                <IonIcon icon={home} />
+                <IonLabel>Home</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="Guide" href="/guide">
+                <IonIcon icon={apps} />
+                <IonLabel>Guide</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="Techniques" href="/techniques">
+                <IonIcon icon={aperture} />
+                <IonLabel>Techniques</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="FAQ" href="/faq">
+                <IonIcon icon={help} />
+                <IonLabel>FAQ</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="Resources" href="/resources">
+                <IonIcon icon={square} />
+                <IonLabel>Resources</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
           </IonTabs>
         </IonReactRouter>
       </IonApp>

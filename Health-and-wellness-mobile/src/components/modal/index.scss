@@ -5,8 +5,13 @@
     flex-direction: row;
     margin: 0 3 * $pad-lg;
     color: black;
-    font-family:Montserrat;
-    font-weight:300;
+    font-family: Montserrat;
+    font-weight: 300;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .modal-body {

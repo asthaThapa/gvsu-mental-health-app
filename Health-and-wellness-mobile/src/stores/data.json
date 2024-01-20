@@ -116,7 +116,7 @@
         }
       },
       {
-        "subscript": "may be",
+        "subscript": "maybe",
         "label": "Depressed",
         "description": "[picture depression]\nMost of us feel down sometimes – it might be when someone has hurt our feelings, or after a breakup or the loss of a loved one.  Usually, those feelings are manageable or go away with time.  Depression, though, is more than just having “the blues” for a few days.  Depression is a persistent feeling of sadness, apathy, or hopelessness, and it isn’t always in response to something bad that’s happened.  Many people feel depressed despite the positive things in their lives.  Depression can impact the way people feel, as well as the way that they think and the things that they do – often in ways that feel outside of their control.\nThere are different forms of depression, such as seasonal depression, dysthymia, postpardum depression, and bipolar disorder.  It is important to remember depression may present differently in different people.",
         "resourcesRelevant": [
@@ -209,7 +209,7 @@
         ]
       },
       {
-        "subscript": "may be",
+        "subscript": "maybe",
         "label": "Suicidal",
         "secundaryBody": "QPR Suicide Prevention Gatekeeper Trainings are held throughout the year and are open to students, faculty, and staff.  Visit the University Counseling Center [link https://www.gvsu.edu/counsel/outreach-and-events-141.htm, placeholder: outreach calendar] for scheduled dates and times.\nTo request a QPR Suicide Prevention Gatekeeper Training for your department or a student, faculty, or staff group, visit the University Counseling Center [link https://www.gvsu.edu/counsel/outreach-141.htm, placeholder: outreach request site].",
         "description": "[picture suicide]\nIn the United States, someone attempts suicide every 27 seconds.  While suicide is the 10th leading cause of death nationally, it is the 2nd leading cause of death among college students – and rates are on the rise.  Suicide may be difficult to talk about, but the warning signs should never be ignored.  Whereas most are not trained to treat those who are experiencing suicidality, anyone can help save a life.",
@@ -293,8 +293,8 @@
         ]
       },
       {
-        "subscript": "is / may",
-        "label": "Threatening/Harm Others",
+        "subscript": "is",
+        "label": "Threatening or harm Others",
         "description": "Campus safety has moved into the foreground at academic institutions across the country.  Recent events and the constant streaming of tragedies from around globe have heightened fears for many.  While it is impossible to accurately predict who might act on concerning behaviors, research has found some commonalities among those who are threatening or might otherwise cause harm to others.  It is important to note that alone, or even in combination, many of the warning signs below are not directly related to risk.  Use your judgement, reach out for help when needed, and err on the side of your safety and the safety of the campus community.",
         "resourcesRelevant": [
           {
@@ -393,7 +393,7 @@
       },
       {
         "subscript": "is exhibiting",
-        "label": "Unusual/Bizarre Behavior",
+        "label": "Unusual or bizarre behavior",
         "description": "[picture psychosis]\nInteracting with someone who speaks or behaves in a way that is unusual can feel frightening. Contrary to what is portrayed in movies and the media, those who experience disruptions to reality are not inherently more dangerous than others. The fact is that disorders that alter the way people think and experience the world are more common than most believe. These disorders often emerge in early adulthood. For some, that means while they are in college.\nThere are many reasons that someone may be exhibiting bizarre or unusual behavior, including a psychotic disorder, a psychotic episode related to another mental health disorder, recreational use or drugs or alcohol, an unintended side-effect of a prescribed medication, nutritional deficits, dehydration, and lack of sleep. It is important to remember that symptoms may present differently in different people.",
         "resourcesRelevant": [
           {
@@ -698,11 +698,13 @@
     "concern-header": "If you are concerned that a student:",
     "concern-bullets": "- May not be safe\n- May harm someone else\n- Is behaving unusually or appears unable to make decisions on their own behalf\n- Has experienced a recent trauma",
     "businessHours": {
-      "title": "During business hours:",
+      "id": "during-business-hours",
+      "title": "During business hours",
       "body": "- Call the University Counseling Center for a consultation or to assist the student with scheduling a crisis appointment.\n- Bring the student to the University Counseling Center for a crisis appointment with a counselor. \n- If there is any immediate risk to the student's well-being, call 911 or GVPD at [phone 616-331-3255]."
     },
     "afterHours": {
-      "title": "After business hours:",
+      "id": "after-business-hours",
+      "title": "After business hours",
       "body": "- If the student lives off-campus or there is an immediate risk to the student’s safety, call 911 immediately.\n- If the student lives on campus, call GVPD at [phone 616-331-3255] to initiate a wellness check and/or connect the student with the on-call counselor",
       "shouldShowCan": false
     }

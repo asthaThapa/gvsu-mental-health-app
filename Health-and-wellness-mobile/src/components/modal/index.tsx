@@ -6,11 +6,13 @@ import {
   IonTitle,
   IonButtons,
   IonToolbar,
+  IonContent,
 } from '@ionic/react';
-import { close } from 'ionicons/icons';
+import { close, information } from 'ionicons/icons';
 import Button from '../button';
-
+import 'animate.css';
 import './index.scss';
+import InformationModal from '../information_modal';
 
 export interface ModalProps {
   header: string;
@@ -18,31 +20,46 @@ export interface ModalProps {
   forceModal: boolean;
   onToggleModalVisible?: (visible: boolean) => void;
   children?: React.ReactNode
+  classname?: string
+  informationModel?: boolean
+  sheetModal?: boolean
 }
 
 export default class Modal extends React.Component<ModalProps> {
+
   public static defaultProps = {
     header: 'Sample',
     showModal: false,
     forceModal: false,
+    classname: 'modal',
+    informationModel: false,
+    sheetModal: false
   };
 
   public render() {
     return (
-      <IonModal isOpen={this.props.showModal} backdropDismiss={false}>
+      <IonModal
+        className={this.props.classname}
+        isOpen={this.props.showModal}
+        backdropDismiss={false}
+        initialBreakpoint={this.props.sheetModal ? 0.75 : 0.95}
+        breakpoints={this.props.sheetModal ? [0.75, 0.75, 0.75, 1] : [0.95, 0.35, 0.99, 1]}
+      >
         {!this.props.forceModal ? (
-          <IonHeader>
+          <IonHeader className="modal-header-container" collapse="fade">
             <IonToolbar>
               <IonButtons slot="end" onClick={this.toggleModalVisible(false)}>
-                <Button onClick={this.toggleModalVisible(false)}>
-                  <IonIcon icon={close} size={'large'} />
+                <Button onClick={this.toggleModalVisible(false)} color='light' fill='clear'>
+                  <IonIcon color="primary" icon={close} size={'large'} />
                 </Button>
               </IonButtons>
-              <IonTitle>{this.props.header}</IonTitle>
+              <IonTitle className='modal-title'>{this.props.header}</IonTitle>
             </IonToolbar>
           </IonHeader>
         ) : null}
-        {this.props.children}
+        <IonContent fullscreen={true} >
+          {this.props.children}
+        </IonContent>
       </IonModal>
     );
   }
@@ -55,4 +72,6 @@ export default class Modal extends React.Component<ModalProps> {
       }
     };
   };
+
+
 }

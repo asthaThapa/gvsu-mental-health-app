@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@capacitor/ios": "^5.6.0"
+    "@capacitor/ios": "^5.6.0",
+    "animate.css": "^4.1.1"
   }
 }

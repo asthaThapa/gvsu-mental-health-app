@@ -11,6 +11,8 @@ import VideoPreview from '../components/video_player';
 import EmergencyButton from '../components/emergency_button';
 import { IonIcon } from '@ionic/react';
 import { arrowBack, arrowDown } from 'ionicons/icons';
+import InformationModal from '../components/information_modal';
+
 import anxious from '../assets/icons/guide/1.png';
 import depressed from '../assets/icons/guide/2.png';
 import sucidal from '../assets/icons/guide/3.png';
@@ -179,6 +181,7 @@ export default class GuideView extends React.Component<ViewProps> {
   private renderOfConcernTile() {
     const tile = this.props.store.data.ofConcernTile;
     const buttons = this.ofConcernTiles.map((item, idx) => {
+      var modalBody = this.renderInformationModel(item.info.header, item.info.body);
       return (
         <ScrollTile
           open={item.open}
@@ -188,7 +191,7 @@ export default class GuideView extends React.Component<ViewProps> {
           onClick={this.handleToggleInnerConcern(item)}
         >
           <div className="faq-view__dropdown">
-            <TextBlock input={item.info.body} />
+            {modalBody}
           </div>
         </ScrollTile>
       );
@@ -259,10 +262,16 @@ export default class GuideView extends React.Component<ViewProps> {
   }
 
   private renderBody(tile: GuideTile) {
+
     if (!tile.info.body) {
       return;
     }
 
+    return this.renderInformationScrollTile('Panic Attack', tile, panic);
+  }
+
+  private renderInformationScrollTile(header: string, tile: any, iconImage: string) {
+    const modalBody = this.renderInformationModel('Panic Attack', tile.info.body!.body);
     return (
       <ScrollTile
         open={tile.bodyOpen}
@@ -272,10 +281,14 @@ export default class GuideView extends React.Component<ViewProps> {
         iconImage={panic}
       >
         <div className="faq-view__dropdown">
-          <TextBlock input={tile.info.body!.body} />
+          {modalBody}
         </div>
       </ScrollTile>
     );
+  }
+
+  private renderInformationModel(header: string, body: string) {
+    return <InformationModal header={header} body={body} />
   }
 
   private renderDosDonts(tile: GuideTileInfo) {

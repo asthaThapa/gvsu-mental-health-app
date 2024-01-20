@@ -1,0 +1,44 @@
+@import '../../theme/theme.scss';
+
+// ion-modal.information-modal {
+//     width: 80%;
+//     max-width: 400px;
+//     margin: 50px auto;
+//     background-color: #fff;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+// }
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 2em 1em 2em;
+    overflow: auto;
+    width: fit-content;
+    min-width: 250px;
+    height: fit-content;
+    border-radius: 6px;
+    box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+ion-backdrop {
+    background: var(--ion-color-dark);
+    opacity: 0.3;
+}
+
+.emergency-modal__section {
+    margin: 3 * $pad-lg 0;
+}
+
+.emergency-modal__header {
+    margin: $pad-lg 0;
+    @include font-sub-header();
+    color: unset;
+}
+
+.emergency-modal__description {
+    margin: $pad-lg 0;
+    @include font-description();
+    font-weight: 200;
+}
