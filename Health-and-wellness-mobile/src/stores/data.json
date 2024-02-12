@@ -506,7 +506,7 @@
       ]
     }
   },
-  "resource": {
+  "resource_old": {
     "tiles": [
       {
         "department": "University Counseling Center",
@@ -659,6 +659,177 @@
       }
     ]
   },
+  "resource": {
+    "tiles": [
+      {
+        "id": "environmentResource",
+        "title": "Environment",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Housing"
+          },
+          {
+            "title": "Facilities"
+          },
+          {
+            "title": "Dean of Students"
+          },
+          {
+            "title": "Student Ombuds"
+          },
+          {
+            "title": "Office of Civil Rights and Title IX"
+          },
+          {
+            "title": "Grand Valley Police Department"
+          },
+          {
+            "title": "Padnos International Center"
+          },
+          {
+            "title": "Veterans Resource Center"
+          },
+          {
+            "title": "Office of Multicultural Affairs"
+          },
+          {
+            "title": "LGBT Resource Center"
+          },
+          {
+            "title": "Center for Women and Gender Equity"
+          }
+        ]
+      },
+      {
+        "id": "occupationalResource",
+        "title": "Occupational",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Career Center"
+          },
+          {
+            "title": "Student Employment"
+          },
+          {
+            "title": "Community Service Learning Center"
+          }
+        ]
+      },
+      {
+        "id": "emotionalResource",
+        "title": "Emotional",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "University Counseling Center"
+          },
+          {
+            "title": "Disability Support Resources"
+          },
+          {
+            "title": "Victim Advocate"
+          }
+        ]
+      },
+      {
+        "id": "physicalResource",
+        "title": "Physical",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Student Health / Trinity Health"
+          },
+          {
+            "title": "RecWell"
+          },
+          {
+            "title": "Disability Support Resources"
+          },
+          {
+            "title": "Laker Food Company Dietician"
+          }
+        ]
+      },
+      {
+        "id": "socialResource",
+        "title": "Social",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Student Life"
+          },
+          {
+            "title": "RecWell"
+          },
+          {
+            "title": "Veterans Resource Center"
+          },
+          {
+            "title": "Office of Multicultural Affairs"
+          },
+          {
+            "title": "LGBT Resource Center"
+          },
+          {
+            "title": "Center for Women and Gender Equity"
+          }
+        ]
+      },
+      {
+        "id": "financialResource",
+        "title": "Financial",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Financial Aid"
+          },
+          {
+            "title": "Student Employment"
+          },
+          {
+            "title": "Replenish"
+          }
+        ]
+      },
+      {
+        "id": "spiritualResource",
+        "title": "Spiritual",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Kaufman Interfaith Institute"
+          }
+        ]
+      },
+      {
+        "id": "intellectualResource",
+        "title": "Intellectual",
+        "img": "resourceEnv",
+        "subResources": [
+          {
+            "title": "Academic Advising Center/s"
+          },
+          {
+            "title": "Student Academic Success Center"
+          },
+          {
+            "title": "Tutoring"
+          },
+          {
+            "title": "Writing Center"
+          },
+          {
+            "title": "University Libraries"
+          },
+          {
+            "title": "Disability Support Resources"
+          }
+        ]
+      }
+    ]
+  },
   "faq": {
     "tiles": [
       {
@@ -694,18 +865,50 @@
   "emergency": {
     "description-header": "A mental health concern becomes a mental health emergency when someone:",
     "description-bullets": "- Is at risk of harming themselves\n- Is at risk of harming someone else\n- Appears out-of-touch with reality or unable to make decisions on their own behalf\n- Has just experienced a trauma (directly after a sexual assault, physical assault, act of terror, etc.)",
-    "description-footer": "In situations like these, your actions are crucial to the well-being of the student and the larger campus community. \n Students experiencing a mental health concern but not actively in crisis may be referred to the University Counseling Center for services. Please visit the “I Have a Student Who. . . .” page for additional information and resources.",
-    "concern-header": "If you are concerned that a student:",
+    "concern-header": "If you believe that a student is experiencing a mental health emergency, click the appropriate button below:",
     "concern-bullets": "- May not be safe\n- May harm someone else\n- Is behaving unusually or appears unable to make decisions on their own behalf\n- Has experienced a recent trauma",
     "businessHours": {
       "id": "during-business-hours",
       "title": "During business hours",
-      "body": "- Call the University Counseling Center for a consultation or to assist the student with scheduling a crisis appointment.\n- Bring the student to the University Counseling Center for a crisis appointment with a counselor. \n- If there is any immediate risk to the student's well-being, call 911 or GVPD at [phone 616-331-3255]."
+      "content": [
+        {
+          "subHeader": "Options",
+          "description": "- Assist the student with calling the University Counseling Center [phone 616-331-3255] to schedule an urgent care appointment. Ensure the student indicates that it is an emergency; make arrangements to support the student in keeping the appointment as able/appropriate.\n- Bring the student to the University Counseling Center (link to location) for an urgent care appointment. You can request to speak with the clinician and share what you know before the student is seen, if needed.\n- Call [phone 911] or 988. First responders can assess for danger and direct the student to appropriate resources."
+        },
+        {
+          "subHeader": "Tips",
+          "description": "- Assist the student with calling the University Counseling Center [phone 616-331-3255] to schedule an urgent care appointment. Ensure the student indicates that it is an emergency; make arrangements to support the student in keeping the appointment as able/appropriate.\n- Bring the student to the University Counseling Center (link to location) for an urgent care appointment. You can request to speak with the clinician and share what you know before the student is seen, if needed.\n- Call [phone 911] or 988. First responders can assess for danger and direct the student to appropriate resources."
+        }
+      ]
     },
     "afterHours": {
       "id": "after-business-hours",
       "title": "After business hours",
-      "body": "- If the student lives off-campus or there is an immediate risk to the student’s safety, call 911 immediately.\n- If the student lives on campus, call GVPD at [phone 616-331-3255] to initiate a wellness check and/or connect the student with the on-call counselor",
+      "content": [
+        {
+          "subHeader": "Options",
+          "description": "Call 911 or 988. First responders can assess for danger and direct the student to appropriate resources."
+        },
+        {
+          "subHeader": "Tips",
+          "description": "- Remain calm.\n- If you are not in danger, maintain communication with the student. You do not have to fixate on or attempt to solve the crisis. Be supportive and empathetic.\n- Encourage the student to engage in self-care (find a comfortable place to sit, reduce sensory distraction, get something to eat or drink, breathe deeply, etc.)\n-See the appropriate “I Have a Student Who” for additional tips/information."
+        }
+      ],
+      "shouldShowCan": false
+    },
+    "recievedRemotely": {
+      "id": "recieved-remotely",
+      "title": "Received Remotely",
+      "content": [
+        {
+          "subHeader": "Offer available emergency resources",
+          "description": "- 911 or 988 \n- Local emergency room/s \n- Housing staff (RAs, LCDs, and members of the Housing staff can access 24 hour emergency mental health support) \n- The University Counseling Center (screening appointments and same day urgent care appointments are available)"
+        },
+        {
+          "subHeader": "Follow up as needed:",
+          "description": "- Remain calm.\n- If you are not in danger, maintain communication with the student. You do not have to fixate on or attempt to solve the crisis. Be supportive and empathetic.\n- Encourage the student to engage in self-care (find a comfortable place to sit, reduce sensory distraction, get something to eat or drink, breathe deeply, etc.)\n-See the appropriate “I Have a Student Who” for additional tips/information."
+        }
+      ],
       "shouldShowCan": false
     }
   },

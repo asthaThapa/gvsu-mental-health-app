@@ -146,7 +146,7 @@ export default class GuideView extends React.Component<ViewProps> {
               <div>{this.renderDosDonts(tile.info)}</div>
             ) : null}
           </div>
-          <div>
+          {/* <div>
             <div className="guide-view__modal-header" onClick={this.handleToggleResourcesRelevantOpen(tile)}>
               Relevant Resources
               {tile.resourcesRelevantOpen ? (
@@ -164,7 +164,7 @@ export default class GuideView extends React.Component<ViewProps> {
             {tile.resourcesRelevantOpen ? (
               <div>{this.renderResources(tile)}</div>
             ) : null}
-          </div>
+          </div> */}
           <div className="view-emergency">
             <EmergencyButton />
           </div>
@@ -333,17 +333,18 @@ export default class GuideView extends React.Component<ViewProps> {
     return <div>{slides}</div>;
   }
 
-  private renderResources(tile: GuideTile) {
-    const resources = this.props.store.data.guideResourceTiles(tile.info);
-    return (
-      <ResourceSlideDock
-        resources={resources}
-        tile={tile.info}
-        onCloseModal={this.handleCloseModal(tile)}
-        stretchCards={true}
-      />
-    );
-  }
+  //Removal of Relevant resources from guide page
+  // private renderResources(tile: GuideTile) {
+  //   const resources = this.props.store.data.guideResourceTiles(tile.info);
+  //   return (
+  //     <ResourceSlideDock
+  //       resources={resources}
+  //       tile={tile.info}
+  //       onCloseModal={this.handleCloseModal(tile)}
+  //       stretchCards={true}
+  //     />
+  //   );
+  // }
 
   @action
   private handleToggleConcernTile = (open: boolean) => {

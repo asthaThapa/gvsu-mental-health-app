@@ -4,7 +4,7 @@ import { classNames } from '../../utils/system'
 import TextBlock from "../text_block"
 
 import './index.scss' //scss import
-import emergencyIcon from '../../assets/icons/emergency.png';
+import emergencyIcon from '../../assets/icons/emergency/emergency.png';
 
 export type ButtonType = 'icon' | 'standard' | 'tabs' | 'emergency' | 'alert'
 export type ButtonColor = 'primary' | 'secondary' | 'danger' | 'light'

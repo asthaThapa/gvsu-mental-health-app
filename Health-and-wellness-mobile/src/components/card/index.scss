@@ -32,3 +32,42 @@
 .styled-card-components .card-description {
     font-size: 1em;
 }
+
+.emergency-modal-bullet-content .emergency-modal_card ion-card-content {
+    padding-left: 15px !important;
+    padding-right: 40px !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 1.5em;
+    overflow: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.styled-card-components .card-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.styled-card-components .card-list .card-image {
+    width: 15%;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    margin-right: 3px;
+}
+
+.styled-card-components .card-list .card-text {
+    flex: 1;
+    /* Allow the text to grow and take remaining space */
+    display: flex;
+    align-items: center;
+    max-width: 30%;
+    /* Align items vertically in the center */
+}
+
+.styled-card-components .card-list .card-subheader {
+    flex: 0 0 auto;
+    margin-left: 10%;
+}

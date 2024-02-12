@@ -38,8 +38,9 @@
         flex-grow: 1;
         width: 45vw;
     }
-    .scroll-tile:first-child{
-      margin-right: 0.5em;
+
+    .scroll-tile:first-child {
+        margin-right: 0.5em;
     }
 }
 
@@ -91,12 +92,13 @@
     @include font-sub-header();
     font-size: 24px;
     color: black;
-    position:relative;
+    position: relative;
     text-align: center;
 
     ion-icon {
-      position: absolute;
-      right: 0px;;
+        position: absolute;
+        right: 0px;
+        ;
     }
 }
 
@@ -106,7 +108,8 @@
     border-radius: $border-radius;
     padding: $pad-lg;
     margin-bottom: 1em;
-    margin-top: $pad-lg;;
+    margin-top: $pad-lg;
+    ;
     text-align: center;
 }
 
@@ -119,42 +122,45 @@
 }
 
 .guide-view__dont .guide-view__modal-subheader,
-.guide-view__do .guide-view__modal-subheader{
-  background-color: inherit;
-  text-align: start;
-  margin: 0;
-  font-weight: 800;
-  font-size: 2.5em;
-  color: black;
-  padding: 0;
-  padding-bottom: 0.1em;
+.guide-view__do .guide-view__modal-subheader {
+    background-color: inherit;
+    text-align: start;
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.5em;
+    color: black;
+    padding: 0;
+    padding-bottom: 0.1em;
 }
 
 .guide-view__do {
-  background-color: #C9E1F4;
-  padding: 1em;
-  margin-bottom:0;
-  font-weight: 100;
+    background-color: #C9E1F4;
+    padding: 1em;
+    margin-bottom: 0;
+    font-weight: 100;
 }
 
 .guide-view__dont {
-  background-color: #8DBFE3;
-  padding: 1em;
-  margin-bottom: 1em;
-  font-weight: 100;
+    background-color: #8DBFE3;
+    padding: 1em;
+    margin-bottom: 1em;
+    font-weight: 100;
 }
+
 .guide-view__dont>ul {
-  margin: 0;
-  padding-left: 3em;
+    margin: 0;
+    padding-left: 3em;
 }
+
 .guide-view__do>ul {
-  margin: 0;
-  padding-left: 3em;
+    margin: 0;
+    padding-left: 3em;
 }
+
 //Faq View
 .faq-view__dropdown {
-  padding: 0 1em;
-  text-transform: initial;
+    padding: 0 1em;
+    text-transform: initial;
 }
 
 .faq-view__dropdown-section--tabbed {
@@ -168,5 +174,31 @@
     margin-bottom: 1em;
 }
 
-.technique-view__modal {
+.resource_card {
+    margin: 2px;
+    margin-bottom: 10px;
+    background-color: #d9e7ff;
+    color: black;
+    font-family: Montserrat;
+    border-radius: 14px;
+}
+
+.resource_card_title {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: Mo;
+}
+
+.resource_card_header {
+    text-align: center;
+}
+
+.resource_card_icon {
+    width: fit-content;
+    padding: 20px 20px 0 20px;
+    margin: auto;
+}
+
+.resources_grid {
+    margin: 20px 0 20px 0;
 }

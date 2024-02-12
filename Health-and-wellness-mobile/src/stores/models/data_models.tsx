@@ -64,9 +64,25 @@ export interface TechniqueInfo {
     techniques: TechniqueBody[]
 }
 
+export interface contentList {
+    subHeader: string
+    description: string
+}
+
 export interface EmergencyInfo {
     title: string
-    body: string
     id: string
+    content: contentList[]
     shouldShowCan?: boolean
+}
+
+export interface ResourceCardInfo {
+    title: string
+    id: string
+    img: string
+    subResources: SubResourceInfo[]
+}
+
+export interface SubResourceInfo {
+    title: string
 }

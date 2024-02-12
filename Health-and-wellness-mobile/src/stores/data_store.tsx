@@ -1,7 +1,8 @@
 import { computed } from 'mobx'
-import { GuideTileInfo, HomeLinks, EmergencyInfo, FaqInfo, TechniqueInfo, ResourceTile } from './models/data_models'
+import { GuideTileInfo, HomeLinks, EmergencyInfo, FaqInfo, TechniqueInfo, ResourceCardInfo } from './models/data_models'
 
 import SystemData from '../stores/data.json'
+
 
 export default class DataStore {
 
@@ -32,19 +33,19 @@ export default class DataStore {
         return this.guideView.otherwiseOfConcern
     }
 
-    public guideResourceTiles(tile: GuideTileInfo) {
-      let result: ResourceTile[] = [];
-      tile.resourcesRelevant.forEach((item) => {
-          this.resourceTiles.some((res)=>{
-              if(item.name === res.department) {
-                result.push(res);
-                return true;
-              }
-                return false;
-              });
-          });
-      return result;
-    }
+    // public guideResourceTiles(tile: GuideTileInfo) {
+    //     let result: ResourceTile[] = [];
+    //     tile.resourcesRelevant.forEach((item) => {
+    //         this.resourceTiles.some((res) => {
+    //             if (item.name === res.department) {
+    //                 result.push(res);
+    //                 return true;
+    //             }
+    //             return false;
+    //         });
+    //     });
+    //     return result;
+    // }
 
     //resource view elements
     @computed
@@ -52,13 +53,13 @@ export default class DataStore {
         return SystemData.resource
     }
 
-    @computed
-    public get resourceTiles() {
-        const tiles = this.resourceView.tiles
-        return tiles.sort((a, b) => {
-            return (a.department < b.department ? -1 : a.department > b.department ? 1 : 0)
-        })
-}
+    // @computed
+    // public get resourceTiles() {
+    //     const tiles = this.resourceView.tiles
+    //     return tiles.sort((a, b) => {
+    //         return (a.department < b.department ? -1 : a.department > b.department ? 1 : 0)
+    //     })
+    // }
 
     //faq view elements
     @computed
@@ -88,6 +89,12 @@ export default class DataStore {
     }
 
     @computed
+    public get emergencyRecievedRemotely(): EmergencyInfo {
+        return this.emergencyModal.recievedRemotely
+    }
+
+
+    @computed
     public get emergencyDescriptionHeader() {
         return this.emergencyModal["description-header"]
     }
@@ -97,10 +104,10 @@ export default class DataStore {
         return this.emergencyModal["description-bullets"]
     }
 
-    @computed
-    public get emergencyDescriptionFooter() {
-        return this.emergencyModal["description-footer"]
-    }
+    // @computed
+    // public get emergencyDescriptionFooter() {
+    //     return this.emergencyModal["description-footer"]
+    // }
 
     @computed
     public get emergencyConcernHeader() {
@@ -117,5 +124,11 @@ export default class DataStore {
     @computed
     public get techniqueView(): TechniqueInfo {
         return SystemData.classRoomTechniques
+    }
+
+    //New Resources
+    @computed
+    public get resourceCardInfo(): ResourceCardInfo[] {
+        return this.resourceView.tiles
     }
 }

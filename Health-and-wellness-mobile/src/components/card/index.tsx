@@ -1,6 +1,7 @@
 import React from 'react'
 import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonImg } from '@ionic/react'
 import { classNames } from '../../utils/system'
+import TextBlock from '../text_block'
 
 import './index.scss'
 
@@ -10,7 +11,7 @@ export interface cardProps {
     title?: string
     stretch: boolean
     children?: React.ReactNode
-    styledComponents?: Record<string, String>;
+    styledComponents?: Record<string, any>;
     customStyle: boolean
 }
 
@@ -55,13 +56,34 @@ export default class Card extends React.Component<cardProps> {
     }
 
     private renderStyledComponents(components: any) {
+        const isList = components.isList ? true : false
         return (
             <div className="styled-card-components">
-                <IonImg className="card-image emergency-phone" src={components.image} />
-                <h1 className='card-header'>{components.header}</h1>
-                <h2 className='card-subheader'>{components.subheader}</h2>
-                <p className='card-description'>{components.description}</p>
-            </div>
+                <div {...isList ? { className: 'card-list' } : { className: 'card-description' }}>
+                    <IonImg className="card-image emergency-phone" src={components.image} />
+                    <div {...isList ? { className: 'card-text' } : { className: 'card-description-text' }}>
+                        {components.header ? <h1 className='card-header'>{components.header}</h1> : null}
+                        <h2 className='card-subheader'>{components.subheader}</h2>
+                    </div>
+                </div>
+                {this.renderDescription(components.body, isList)}
+            </div >
         )
     }
+
+    private renderDescription(description: string, isList: boolean) {
+        if (isList) {
+            return (
+                <p className='card-description-list'>
+                    <TextBlock input={description} />
+                </p>
+            )
+        } else {
+            return (
+                <p className='card-description'>{description}</p>
+            )
+        }
+    }
+
+
 }
