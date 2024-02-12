@@ -704,7 +704,7 @@
       {
         "id": "occupationalResource",
         "title": "Occupational",
-        "img": "resourceEnv",
+        "img": "resourceOcc",
         "subResources": [
           {
             "title": "Career Center"
@@ -720,7 +720,7 @@
       {
         "id": "emotionalResource",
         "title": "Emotional",
-        "img": "resourceEnv",
+        "img": "resourceEmo",
         "subResources": [
           {
             "title": "University Counseling Center"
@@ -736,7 +736,7 @@
       {
         "id": "physicalResource",
         "title": "Physical",
-        "img": "resourceEnv",
+        "img": "resourcePhy",
         "subResources": [
           {
             "title": "Student Health / Trinity Health"
@@ -755,7 +755,7 @@
       {
         "id": "socialResource",
         "title": "Social",
-        "img": "resourceEnv",
+        "img": "resourceSoc",
         "subResources": [
           {
             "title": "Student Life"
@@ -780,7 +780,7 @@
       {
         "id": "financialResource",
         "title": "Financial",
-        "img": "resourceEnv",
+        "img": "resourceFin",
         "subResources": [
           {
             "title": "Financial Aid"
@@ -796,7 +796,7 @@
       {
         "id": "spiritualResource",
         "title": "Spiritual",
-        "img": "resourceEnv",
+        "img": "resourceSpi",
         "subResources": [
           {
             "title": "Kaufman Interfaith Institute"
@@ -806,7 +806,7 @@
       {
         "id": "intellectualResource",
         "title": "Intellectual",
-        "img": "resourceEnv",
+        "img": "resourceInt",
         "subResources": [
           {
             "title": "Academic Advising Center/s"
