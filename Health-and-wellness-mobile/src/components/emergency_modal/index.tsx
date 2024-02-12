@@ -4,12 +4,11 @@ import Modal from "../modal"
 import Store from "../../stores/store"
 import { EmergencyInfo } from "../../stores/models/data_models"
 import TextBlock from "../text_block"
-import Button from "../button"
 import emergencyIcon from '../../assets/images/emergencyButton/emergency-phone.png';
 import Card from '../card/index';
+import BulletModalButton from "../bullet_modal_button"
 
 import "./index.scss"
-import { business } from "ionicons/icons"
 
 export interface Props {
     onToggleVisible: (visible: boolean) => void
@@ -52,22 +51,23 @@ export default class EmergencyModal extends React.Component<Props> {
         const data = this.props.store.data
         const during = data.emergencyBusinessHourInfo
         const after = data.emergencyAfterHourInfo
-
+        const receivedRemotely = data.emergencyRecievedRemotely
 
         const cardContent = {
             header: "988",
             subheader: "Suicide and Crisis Lifeline",
-            description: "Call or text 988 for immediate mental health support.",
+            body: "Call or text 988 for immediate mental health support.",
             image: emergencyIcon
         };
 
         return (
             <>
                 <Card stretch={false} styledComponents={cardContent} customStyle={true}></Card>
-                {this.renderSection(during)}
-                {this.renderSection(after)}
                 {this.renderDescription()}
                 {this.renderConcerned()}
+                {this.renderSection(during)}
+                {this.renderSection(after)}
+                {this.renderSection(receivedRemotely)}
             </>
         )
     }
@@ -76,7 +76,6 @@ export default class EmergencyModal extends React.Component<Props> {
         const data = this.props.store.data
         const header = data.emergencyDescriptionHeader
         const bullets = data.emergencyDescriptionBullets
-        const footer = data.emergencyDescriptionFooter
 
         return (
             <>
@@ -86,9 +85,6 @@ export default class EmergencyModal extends React.Component<Props> {
                 <div className="emergency-modal__description">
                     <TextBlock input={bullets} />
                 </div>
-                <div className="emergency-modal__description">
-                    <TextBlock input={footer} />
-                </div>
             </>
         )
     }
@@ -96,15 +92,10 @@ export default class EmergencyModal extends React.Component<Props> {
     private renderConcerned() {
         const data = this.props.store.data
         const header = data.emergencyConcernHeader
-        const bullets = data.emergencyConcernBullets
-
         return (
-            <div className="emergency-modal__section">
-                <div className="emergency-modal__header">
+            <div className="emergency-modal__description">
+                <div className="text-block-center">
                     <span>{header}</span>
-                </div>
-                <div>
-                    <TextBlock input={bullets} />
                 </div>
             </div>
         )
@@ -113,14 +104,10 @@ export default class EmergencyModal extends React.Component<Props> {
     private renderSection(info: EmergencyInfo) {
         return (
             <div className="emergency-modal__">
-                <Button
-                    type="alert"
-                    id={info.id}
-                    buttonHeader={info.title}
-                    buttonContent={info.body}
-                    fillWidth={true} >
-                </Button>
+                <BulletModalButton header={info.title} content={info.content} />
             </div>
         )
     }
+
+
 }
