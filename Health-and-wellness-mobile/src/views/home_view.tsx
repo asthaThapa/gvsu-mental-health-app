@@ -4,7 +4,7 @@ import View from "./view_models/view"
 import { inject, observer } from "mobx-react"
 import ScrollTile from "../components/scroll_tile"
 import { IonImg } from '@ionic/react';
-import homePageImg from '../assets/customeHome.png'
+import homePageImg from '../assets/home.png'
 
 import './views.scss'
 
@@ -25,7 +25,9 @@ export default class HomeView extends React.Component<ViewProps> {
         const body = (
             <div className="home-view">
 
-                <IonImg src={homePageImg} />
+                <div className="home-view-header_image">
+                    <IonImg src={homePageImg} />
+                </div>
 
                 <div className="home-view__wrappers ">
                     <ScrollTile open={false} label={tiles[0].label} link={tiles[0].link} homeView={true} />

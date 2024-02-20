@@ -20,8 +20,9 @@
 //Home View
 .home-view__wrappers {
     flex-grow: 1;
-
 }
+
+.home-view-header_image {}
 
 .home-view {
     height: 100%;
@@ -186,7 +187,6 @@
 .resource_card_title {
     font-size: 16px;
     font-weight: 300;
-    font-style: Mo;
 }
 
 .resource_card_header {
@@ -201,4 +201,44 @@
 
 .resources_grid {
     margin: 20px 0 20px 0;
+}
+
+.subresource_card {
+    padding: 5px;
+}
+
+.subresource_card_title {
+    font-size: 18px;
+    font-weight: 510;
+    color: #494444 !important;
+}
+
+.subresource_card_icon {
+    width: 50px;
+    height: 50px;
+    margin: 20px 0 20px 10px 10px;
+    border-radius: 10px !important;
+}
+
+.subresource-icon img {
+    --borderRadius: 10px;
+}
+
+.sub_resources_grid {
+    margin-bottom: 50px;
+}
+
+.subresource_email {
+    font-size: 13px !important;
+    color: #9a9797;
+    margin: 4px;
+}
+
+.subresource_card_row {
+    text-align: center;
+    justify-content: center;
+}
+
+.subresource_phone_web_row {
+    justify-content: center;
 }

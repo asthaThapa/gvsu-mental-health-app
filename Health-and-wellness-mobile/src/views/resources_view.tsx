@@ -6,17 +6,12 @@ import View from './view_models/view'
 import {
   IonCol,
   IonGrid,
-  IonRow,
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
+  IonRow
 } from '@ionic/react';
 import ResourceCard from '../components/card_resources';
 import { ResourceCardInfo } from '../stores/models/data_models';
 
-import imgPlaceholder from '../assets/gv_placeholder_logo.jpg';
+import iconPlaceholder from '../assets/gv_placeholder_logo.jpg';
 import environment from '../assets/icons/resources/resourceEnv.png'
 import occupational from '../assets/icons/resources/resourceOcc.png'
 import emotional from '../assets/icons/resources/resourceEmo.png'
@@ -26,15 +21,15 @@ import financial from '../assets/icons/resources/resourceFin.png'
 import spirtual from '../assets/icons/resources/resourceSpi.png'
 import intellectual from '../assets/icons/resources/resourceInt.png'
 
-const mainResImages = [
-  { name: 'resourceEnv', image: environment },
-  { name: 'resourceOcc', image: occupational },
-  { name: 'resourceEmo', image: emotional },
-  { name: 'resourcePhy', image: physical },
-  { name: 'resourceSoc', image: social },
-  { name: 'resourceFin', image: financial },
-  { name: 'resourceSpi', image: spirtual },
-  { name: 'resourceInt', image: intellectual },
+const mainResIcons = [
+  { name: 'resourceEnv', icon: environment },
+  { name: 'resourceOcc', icon: occupational },
+  { name: 'resourceEmo', icon: emotional },
+  { name: 'resourcePhy', icon: physical },
+  { name: 'resourceSoc', icon: social },
+  { name: 'resourceFin', icon: financial },
+  { name: 'resourceSpi', icon: spirtual },
+  { name: 'resourceInt', icon: intellectual },
 ];
 
 export interface Props {
@@ -46,7 +41,6 @@ export interface ResourcesCardTile {
   open: boolean;
   bodyOpen: boolean;
 }
-
 
 @inject("store")
 @observer
@@ -71,6 +65,26 @@ export default class ResourcesView extends React.Component<Props> {
     const body = (
       <>
         <IonGrid className='resources_grid'>
+          {/* <IonRow>
+            <IonCol>
+              <ResourceCard
+                open={false}
+                enableModal={false}
+                title="UCC"
+                iconImage={iconPlaceholder}
+              />
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              <ResourceCard
+                open={false}
+                enableModal={false}
+                title="UCC"
+                iconImage={iconPlaceholder}
+              />
+            </IonCol>
+          </IonRow> */}
           {this.tiles.map((item: ResourcesCardTile, index) => {
             if (index % 2 === 0) {
               return (
@@ -94,7 +108,7 @@ export default class ResourcesView extends React.Component<Props> {
   }
 
   private renderCard(item: ResourcesCardTile) {
-    var iconImg = mainResImages.find(resource => resource.name === item.info.img)?.image || imgPlaceholder;
+    var iconImg = mainResIcons.find(resource => resource.name === item.info.img)?.icon || iconPlaceholder;
     return (
       <ResourceCard
         open={item.open}
@@ -103,7 +117,7 @@ export default class ResourcesView extends React.Component<Props> {
         iconImage={iconImg}
         onToggleOpen={this.handleToggleModal(item)}
       >
-        {this.renderResources(item.info.subResources)}
+        {this.renderSubResources(item.info.subResources)}
       </ResourceCard>
     )
   }
@@ -115,10 +129,10 @@ export default class ResourcesView extends React.Component<Props> {
     });
   };
 
-  private renderResources = (subresources: any) => {
+  private renderSubResources = (subresources: any) => {
     const body = (
       <>
-        <IonGrid className='resources_grid'>
+        <IonGrid className='sub_resources_grid'>
           {subresources.map((item: any, index: number) => {
             return (
               <IonRow key={index}>
@@ -127,7 +141,7 @@ export default class ResourcesView extends React.Component<Props> {
                     open={false}
                     enableModal={false}
                     title={item.title}
-                    iconImage={imgPlaceholder}
+                    subResources={true}
                   />
                 </IonCol>
               </IonRow>
