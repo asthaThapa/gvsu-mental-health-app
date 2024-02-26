@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { classNames } from '../../utils/system';
 import VideoPreview from '../video_player';
-import { IonImg, IonCard, IonCardHeader, IonCardContent } from '@ionic/react';
+import { IonImg } from '@ionic/react';
 import anxiety from '../../assets/Anxiety.png';
 import depression from '../../assets/Depression.png';
 import suicide from '../../assets/Suicide.png';
@@ -13,25 +13,25 @@ export interface TextBlockProps {
   input: string;
 }
 
-const ReadMore = ({ children }: any) => {
-  const text = children;
-  const [isReadMore, setIsReadMore] = useState(true);
-  const toggleReadMore = () => {
-    setIsReadMore(!isReadMore);
-  };
-  return (
-    <p className="text">
-      {isReadMore ? text.slice(0, 100) : text}
-      <span
-        onClick={toggleReadMore}
-        className="read-or-hide"
-        style={{ color: "green" }}
-      >
-        {isReadMore ? "...read more" : " show less"}
-      </span>
-    </p>
-  );
-};
+// const ReadMore = ({ children }: any) => {
+//   const text = children;
+//   const [isReadMore, setIsReadMore] = useState(true);
+//   const toggleReadMore = () => {
+//     setIsReadMore(!isReadMore);
+//   };
+//   return (
+//     <p className="text">
+//       {isReadMore ? text.slice(0, 100) : text}
+//       <span
+//         onClick={toggleReadMore}
+//         className="read-or-hide"
+//         style={{ color: "green" }}
+//       >
+//         {isReadMore ? "...read more" : " show less"}
+//       </span>
+//     </p>
+//   );
+// };
 
 
 export default class TextBlock extends React.Component<TextBlockProps> {
@@ -62,7 +62,7 @@ export default class TextBlock extends React.Component<TextBlockProps> {
       let destNum = null;
       let picture = null;
       let header = null;
-      let readMore = null;
+      // let readMore = null;
 
       if (sec[0] === '-') {
         sec = sec.substr(1);
@@ -143,7 +143,7 @@ export default class TextBlock extends React.Component<TextBlockProps> {
           {header}
           {link}
           {number}
-          {readMore ? <ReadMore>{postLink}</ReadMore> : postLink}
+          {postLink}
           {video}
         </div>
       );
