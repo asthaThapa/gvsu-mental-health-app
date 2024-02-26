@@ -86,6 +86,8 @@ export default class GuideView extends React.Component<ViewProps> {
       return (
         <ScrollTile
           open={tile.open}
+          hasCustomClass={true}
+          customClassName='scroll-tile-guide'
           subscript={tile.info.subscript}
           label={tile.info.label}
           enableModal={true}
@@ -230,6 +232,8 @@ export default class GuideView extends React.Component<ViewProps> {
         subscript={tile.subscript}
         label={tile.header}
         enableModal={true}
+        customClassName='scroll-tile-guide'
+        hasCustomClass={true}
         onToggleOpen={this.handleToggleConcernTile}
         iconImage={otherwise}
       >
@@ -295,10 +299,10 @@ export default class GuideView extends React.Component<ViewProps> {
       return;
     }
 
-    return this.renderInformationScrollTile('Panic Attack', tile, panic);
+    return this.renderInformationScrollTile('Panic Attack', tile);
   }
 
-  private renderInformationScrollTile(header: string, tile: any, iconImage: string) {
+  private renderInformationScrollTile(header: string, tile: any, iconImage?: string) {
     const modalBody = this.renderInformationModel('Panic Attack', tile.info.body!.body);
     return (
       <ScrollTile
@@ -306,7 +310,6 @@ export default class GuideView extends React.Component<ViewProps> {
         label={tile.info.body!.header}
         onClick={this.handleToggleBodyOpen(tile)}
         enableDropdown={true}
-        iconImage={panic}
       >
         <div className="faq-view__dropdown">
           {modalBody}

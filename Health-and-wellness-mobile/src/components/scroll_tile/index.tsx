@@ -20,6 +20,8 @@ export interface ScrollTileProps {
   homeView: boolean;
   children?: React.ReactNode
   iconImage?: string;
+  hasCustomClass?: boolean;
+  customClassName?: string;
 }
 
 @observer
@@ -28,14 +30,15 @@ export default class ScrollTile extends React.Component<ScrollTileProps> {
     enableModal: false,
     fillWidth: false,
     onOpen: () => { },
-    homeView: false,
+    homeView: false
   };
 
   public render() {
-    const { label, fillWidth, link, subscript, homeView, iconImage } = this.props;
+    const { label, fillWidth, link, subscript, homeView, iconImage, customClassName, hasCustomClass } = this.props;
     const classes = classNames('scroll-tile', [
       { name: 'scroll-tile--fill', include: fillWidth },
       { name: 'scroll-tile__home', include: homeView },
+      { name: customClassName ? customClassName : 'customClassName', include: hasCustomClass ? hasCustomClass : false }
     ]);
 
     const subscriptClass = subscript ? 'scroll-tile__heading' : '';

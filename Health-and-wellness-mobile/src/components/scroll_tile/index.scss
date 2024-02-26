@@ -6,13 +6,13 @@
     margin-top: 0.5em;
     background-color: $primary2;
     padding: 0.7em;
-    // text-transform: uppercase;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    // Add bottom border drop shadow
     box-shadow: inset 0px -10px 10px -10px rgba(225, 222, 222, 0.75);
-    //height: 75px; //defining a specific height impacts faq
+}
+
+.scroll-tile-guide {
+    display: flex;
 }
 
 .scroll-tile--fill {
@@ -21,7 +21,7 @@
 
 .scroll-tile__button {
     @include font-header2(16px);
-    text-align: left;
+    // text-align: left;
 }
 
 .scroll-tile__subscript {
