@@ -6,7 +6,8 @@ import View from './view_models/view'
 import {
   IonCol,
   IonGrid,
-  IonRow
+  IonRow,
+  IonButton
 } from '@ionic/react';
 import ResourceCard from '../components/card_resources';
 import { ResourceCardInfo } from '../stores/models/data_models';
@@ -61,30 +62,27 @@ export default class ResourcesView extends React.Component<Props> {
   );
 
   public render() {
+    let mainResource = this.tiles.find(tile => tile.info.id === 'emotionalResource');
+    let ucc = mainResource ? mainResource.info.subResources.find(res => res.title === 'University Counseling Center') : null;
 
     const body = (
       <>
         <IonGrid className='resources_grid'>
-          {/* <IonRow>
-            <IonCol>
-              <ResourceCard
-                open={false}
-                enableModal={false}
-                title="UCC"
-                iconImage={iconPlaceholder}
-              />
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <ResourceCard
-                open={false}
-                enableModal={false}
-                title="UCC"
-                iconImage={iconPlaceholder}
-              />
-            </IonCol>
-          </IonRow> */}
+          {ucc ?
+            <IonRow>
+              <IonCol>
+                <ResourceCard
+                  open={false}
+                  enableModal={false}
+                  title={ucc.title}
+                  email={ucc.email}
+                  phone={ucc.phone}
+                  link={ucc.link}
+                  subResources={true}
+                />
+              </IonCol>
+            </IonRow> : null}
+
           {this.tiles.map((item: ResourcesCardTile, index) => {
             if (index % 2 === 0) {
               return (
@@ -98,6 +96,16 @@ export default class ResourcesView extends React.Component<Props> {
             }
             return null;
           })}
+
+          <IonRow>
+            <IonCol className='careReport'>
+              <IonButton
+                href="https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2"
+                target="_blank">
+                <span>Create a care report</span>
+              </IonButton>
+            </IonCol>
+          </IonRow>
         </IonGrid>
       </>
     )
@@ -141,6 +149,9 @@ export default class ResourcesView extends React.Component<Props> {
                     open={false}
                     enableModal={false}
                     title={item.title}
+                    email={item.email}
+                    phone={item.phone}
+                    link={item.link}
                     subResources={true}
                   />
                 </IonCol>
@@ -159,4 +170,5 @@ export default class ResourcesView extends React.Component<Props> {
   }
 
 }
+
 

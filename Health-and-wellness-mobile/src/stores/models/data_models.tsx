@@ -85,7 +85,10 @@ export interface ResourceCardInfo {
 }
 
 export interface SubResourceInfo {
-    title: string
+    title: string,
+    link?: string,
+    phone?: string,
+    email?: string
 }
 
 export interface howToHelp {

@@ -772,37 +772,76 @@
         "img": "resourceEnv",
         "subResources": [
           {
-            "title": "Housing"
+            "title": "Housing",
+            "link": "https://www.gvsu.edu/housing/",
+            "phone": "(616) 331-2120",
+            "email": "housing@gvsu.edu"
           },
           {
-            "title": "Facilities"
+            "title": "Facilities",
+            "link": "https://www.gvsu.edu/facilitiesservices/",
+            "phone": "(616) 331-3000",
+            "email": "servicef@gvsu.edu"
           },
           {
-            "title": "Dean of Students"
+            "title": "Dean of Students Office",
+            "link": "https://www.gvsu.edu/dso/",
+            "phone": "(616) 331-3585",
+            "email": "dso@gvsu.edu"
           },
           {
-            "title": "Student Ombuds"
+            "title": "Student Ombuds",
+            "link": "https://www.gvsu.edu/ombuds/",
+            "phone": "(616) 331-2491",
+            "email": "ombuds@gvsu.edu"
           },
           {
-            "title": "Office of Civil Rights and Title IX"
+            "title": "Office of Civil Rights and Title IX",
+            "link": "https://www.gvsu.edu/titleix/",
+            "phone": "(616) 331-9530",
+            "email": "titleix@gvsu.edu"
           },
           {
-            "title": "Grand Valley Police Department"
+            "title": "GVPD",
+            "link": "https://www.gvsu.edu/dps/",
+            "phone": "(616) 331-3255",
+            "email": "N/A"
           },
           {
-            "title": "Padnos International Center"
+            "title": "Padnos International Center",
+            "link": "https://www.gvsu.edu/pic/",
+            "phone": "(616) 331-3898",
+            "email": "pic@gvsu.edu"
           },
           {
-            "title": "Veterans Resource Center"
+            "title": "Veterans Resource Center",
+            "link": "https://www.gvsu.edu/veterans/",
+            "phone": "N/A",
+            "email": "mvrcdirector@gvsu.edu"
           },
           {
-            "title": "Office of Multicultural Affairs"
+            "title": "Office of Multicultural Affairs",
+            "link": "https://www.gvsu.edu/oma/",
+            "phone": "(616) 331-2177",
+            "email": "oma@gvsu.edu"
           },
           {
-            "title": "LGBT Resource Center"
+            "title": "LGBT Resource Center",
+            "link": "https://www.gvsu.edu/lgbtrc/",
+            "phone": "(616) 331-2530",
+            "email": "lgbtcenter@gvsu.edu"
           },
           {
-            "title": "Center for Women and Gender Equity"
+            "title": "Center for Women and Gender Equity",
+            "link": "https://www.gvsu.edu/cwge/",
+            "phone": "(616) 331-2748",
+            "email": "cwge@gvsu.edu"
+          },
+          {
+            "title": "Campus Climate Incident Report",
+            "link": "https://www.gvsu.edu/ccc/",
+            "phone": "(616) 331-3296",
+            "email": "N/A"
           }
         ]
       },
@@ -812,13 +851,22 @@
         "img": "resourceOcc",
         "subResources": [
           {
-            "title": "Career Center"
+            "title": "Career Center",
+            "link": "https://www.gvsu.edu/careers/",
+            "phone": "(616) 331-3311",
+            "email": "careers@gvsu.edu"
           },
           {
-            "title": "Student Employment"
+            "title": "Student Employment",
+            "link": "https://www.gvsu.edu/studentjobs/",
+            "phone": "(616) 331-3238",
+            "email": "studentjobs@gvsu.edu"
           },
           {
-            "title": "Community Service Learning Center"
+            "title": "Community Service Learning Center",
+            "link": "https://www.gvsu.edu/gvnext/community-service-learning-center.htm",
+            "phone": "(616) 331-2221",
+            "email": "N/A"
           }
         ]
       },
@@ -828,13 +876,22 @@
         "img": "resourceEmo",
         "subResources": [
           {
-            "title": "University Counseling Center"
+            "title": "University Counseling Center",
+            "link": "https://www.gvsu.edu/counsel/",
+            "phone": "(616) 331-3266",
+            "email": "gvcounsl@gvsu.edu"
           },
           {
-            "title": "Disability Support Resources"
+            "title": "Disability Support Resources",
+            "link": "https://www.gvsu.edu/dsr/",
+            "phone": "(616) 331-2490",
+            "email": "dsrgvsu@gvsu.edu"
           },
           {
-            "title": "Victim Advocate"
+            "title": "Victim Advocate",
+            "link": "https://www.gvsu.edu/cwge/victim-survivor-advocacy-20.htm",
+            "phone": "(616) 331-2742",
+            "email": "cwge@gvsu.edu"
           }
         ]
       },
@@ -844,16 +901,34 @@
         "img": "resourcePhy",
         "subResources": [
           {
-            "title": "Student Health / Trinity Health"
+            "title": "Campus Health Center",
+            "link": "https://www.trinityhealthmichigan.org/location/trinity-health-medical-group-primary-care-gvsu",
+            "phone": "616-685-7600",
+            "email": "campushealth@gvsu.edu"
           },
           {
-            "title": "RecWell"
+            "title": "RecWell",
+            "link": "https://www.gvsu.edu/rec/",
+            "phone": "(616) 331-1732",
+            "email": "rec@gvsu.edu"
           },
           {
-            "title": "Disability Support Resources"
+            "title": "Disability Support Resources",
+            "link": "https://www.gvsu.edu/dsr/",
+            "phone": "(616) 331-2490",
+            "email": "dsrgvsu@gvsu.edu"
           },
           {
-            "title": "Laker Food Company Dietician"
+            "title": "Laker Food Company",
+            "link": "https://www.gvsu.edu/campusdine/",
+            "phone": "(616) 331-3016",
+            "email": "gvsufood@gvsu.edu"
+          },
+          {
+            "title": "Replenish",
+            "link": "https://www.gvsu.edu/basic/",
+            "phone": "(616) 331-2748",
+            "email": "cwge@gvsu.edu"
           }
         ]
       },
@@ -863,22 +938,46 @@
         "img": "resourceSoc",
         "subResources": [
           {
-            "title": "Student Life"
+            "title": "Student Life",
+            "link": "https://www.gvsu.edu/studentlife/",
+            "phone": "(616) 331-2345",
+            "email": "studentlife@gvsu.edu"
           },
           {
-            "title": "RecWell"
+            "title": "RecWell",
+            "link": "https://www.gvsu.edu/rec/",
+            "phone": "(616) 331-1732",
+            "email": "rec@gvsu.edu"
           },
           {
-            "title": "Veterans Resource Center"
+            "title": "Veterans Resource Center",
+            "link": "https://www.gvsu.edu/veterans/",
+            "phone": "N/A",
+            "email": "mvrcdirector@gvsu.edu"
           },
           {
-            "title": "Office of Multicultural Affairs"
+            "title": "Office of Multicultural Affairs",
+            "link": "https://www.gvsu.edu/oma/",
+            "phone": "(616) 331-2177",
+            "email": "oma@gvsu.edu"
           },
           {
-            "title": "LGBT Resource Center"
+            "title": "LGBT Resource Center",
+            "link": "https://www.gvsu.edu/lgbtrc/",
+            "phone": "(616) 331-2530",
+            "email": "lgbtcenter@gvsu.edu"
           },
           {
-            "title": "Center for Women and Gender Equity"
+            "title": "Center for Women and Gender Equity",
+            "link": "https://www.gvsu.edu/cwge/",
+            "phone": "(616) 331-2748",
+            "email": "cwge@gvsu.edu"
+          },
+          {
+            "title": "Student Ombuds",
+            "link": "https://www.gvsu.edu/ombuds/",
+            "phone": "(616) 331-2491",
+            "email": "ombuds@gvsu.edu"
           }
         ]
       },
@@ -888,13 +987,22 @@
         "img": "resourceFin",
         "subResources": [
           {
-            "title": "Financial Aid"
+            "title": "Financial Aid",
+            "link": "https://www.gvsu.edu/financialaid/",
+            "phone": "(616) 331-3234",
+            "email": "finaid@gvsu.edu"
           },
           {
-            "title": "Student Employment"
+            "title": "Student Employment",
+            "link": "https://www.gvsu.edu/studentjobs/",
+            "phone": "(616) 331-3238",
+            "email": "studentjobs@gvsu.edu"
           },
           {
-            "title": "Replenish"
+            "title": "Replenish",
+            "link": "https://www.gvsu.edu/basic/",
+            "phone": "(616) 331-2748",
+            "email": "cwge@gvsu.edu"
           }
         ]
       },
@@ -904,7 +1012,10 @@
         "img": "resourceSpi",
         "subResources": [
           {
-            "title": "Kaufman Interfaith Institute"
+            "title": "Kaufman Interfaith Institute",
+            "link": "https://www.gvsu.edu/interfaith/",
+            "phone": "(616) 331-5702",
+            "email": "interfaith@gvsu.edu"
           }
         ]
       },
@@ -914,22 +1025,46 @@
         "img": "resourceInt",
         "subResources": [
           {
-            "title": "Academic Advising Center/s"
+            "title": "Academic Advising",
+            "link": "https://www.gvsu.edu/advising/advising-centers-70.htm",
+            "phone": "N/A",
+            "email": "N/A"
           },
           {
-            "title": "Student Academic Success Center"
+            "title": "Student Academic Success Center",
+            "link": "https://www.gvsu.edu/sasc/",
+            "phone": "(616) 331-3588",
+            "email": "sasc@gvsu.edu"
           },
           {
-            "title": "Tutoring"
+            "title": "Tutoring",
+            "link": "https://www.gvsu.edu/tutoring/",
+            "phone": "(616) 331-3451",
+            "email": "tutoring@gvsu.edu"
           },
           {
-            "title": "Writing Center"
+            "title": "Writing Center",
+            "link": "https://www.gvsu.edu/wc/",
+            "phone": "(616) 331-2922",
+            "email": "johpatri@gvsu.edu"
           },
           {
-            "title": "University Libraries"
+            "title": "University Libraries",
+            "link": "https://www.gvsu.edu/library/",
+            "phone": "(616) 331-3500",
+            "email": "library@gvsu.edu"
           },
           {
-            "title": "Disability Support Resources"
+            "title": "Disability Support Resources",
+            "link": "https://www.gvsu.edu/dsr/",
+            "phone": "(616) 331-2490",
+            "email": "dsrgvsu@gvsu.edu"
+          },
+          {
+            "title": "Pew FTLC",
+            "link": "https://www.gvsu.edu/ftlc/",
+            "phone": "(616) 331-3498",
+            "email": "ftlc@gvsu.edu"
           }
         ]
       }

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { IonButton, IonImg, IonAlert } from '@ionic/react'
+import { IonButton, IonAlert } from '@ionic/react'
 import { classNames } from '../../utils/system'
 import './index.scss' //scss import
 
