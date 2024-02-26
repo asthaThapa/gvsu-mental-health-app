@@ -75,7 +75,6 @@ export default class TextBlock extends React.Component<TextBlockProps> {
           sec.indexOf(']') - (sec.indexOf('[') + 8),
         );
         const pic = this.selectPicture(picLink);
-        console.log(pic);
         picture = <IonImg className="resource-tile__image" src={pic} />;
       }
 
@@ -152,7 +151,6 @@ export default class TextBlock extends React.Component<TextBlockProps> {
   }
 
   private selectPicture(input: string) {
-    console.log('input: ', input);
     switch (input.trim()) {
       case 'anxiety':
         return anxiety;

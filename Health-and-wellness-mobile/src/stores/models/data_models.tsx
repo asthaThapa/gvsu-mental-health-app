@@ -25,6 +25,7 @@ export interface GuideTileInfo {
     body?: GuideBody
     secundaryBody?: string
     dosDonts: DosDonts[]
+    howToHelp: howToHelp
 }
 
 export interface DosDonts {
@@ -85,4 +86,14 @@ export interface ResourceCardInfo {
 
 export interface SubResourceInfo {
     title: string
+}
+
+export interface howToHelp {
+    description?: string,
+    bullets: howToHelpBullet[]
+}
+
+export interface howToHelpBullet {
+    title: string,
+    description: string
 }

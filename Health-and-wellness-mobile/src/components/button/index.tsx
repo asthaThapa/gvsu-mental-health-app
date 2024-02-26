@@ -1,10 +1,8 @@
 import * as React from 'react'
 import { IonButton, IonImg, IonAlert } from '@ionic/react'
 import { classNames } from '../../utils/system'
-import TextBlock from "../text_block"
-
 import './index.scss' //scss import
-import emergencyIcon from '../../assets/icons/emergency/emergency.png';
+
 
 export type ButtonType = 'icon' | 'standard' | 'tabs' | 'emergency' | 'alert'
 export type ButtonColor = 'primary' | 'secondary' | 'danger' | 'light'
@@ -61,7 +59,6 @@ export default class Button extends React.Component<ButtonProps> {
             return (
                 <div className={buttonClass}>
                     <IonButton id={id} onClick={onClick} fill={fillVal} color={'danger'}>
-                        <IonImg className='emergencyIcon' src={emergencyIcon} />
                         <span className='emergencyText'>{this.props.children}</span>
                     </IonButton>
                 </div >

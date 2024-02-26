@@ -2,9 +2,9 @@ import React from 'react';
 import { inject, observer } from 'mobx-react';
 import View from './view_models/view';
 import ScrollTile from '../components/scroll_tile';
+import HowToHelp from '../components/how_to_help_card';
 import Store from '../stores/store';
 import { GuideTileInfo } from '../stores/models/data_models';
-import ResourceSlideDock from '../components/resource_slider_dock';
 import TextBlock from '../components/text_block';
 import { observable, action } from 'mobx';
 import VideoPreview from '../components/video_player';
@@ -20,6 +20,7 @@ import threatening from '../assets/icons/guide/4.png';
 import unusalBehavior from '../assets/icons/guide/5.png';
 import otherwise from '../assets/icons/guide/otherwise.png';
 import panic from '../assets/icons/guide/panic.png';
+import { title } from 'process';
 
 const imageArray = [anxious, depressed, sucidal, threatening, unusalBehavior]
 
@@ -32,7 +33,8 @@ export interface GuideTile {
   open: boolean;
   bodyOpen: boolean;
   warningSignsOpen: boolean;
-  dosAndDontsOpen: boolean;
+  // dosAndDontsOpen: boolean;
+  howToHelpOpen: boolean;
   resourcesRelevantOpen: boolean;
 }
 
@@ -46,7 +48,8 @@ export default class GuideView extends React.Component<ViewProps> {
         open: false,
         bodyOpen: false,
         warningSignsOpen: false,
-        dosAndDontsOpen: false,
+        // dosAndDontsOpen: false,
+        howToHelpOpen: false,
         resourcesRelevantOpen: false,
       };
     },
@@ -124,7 +127,7 @@ export default class GuideView extends React.Component<ViewProps> {
               </div>
             ) : null}
           </div>
-          <div>
+          {/* <div>
             <div
               className="guide-view__modal-header"
               onClick={this.handleToggleDosAndDontsOpen(tile)}
@@ -145,7 +148,32 @@ export default class GuideView extends React.Component<ViewProps> {
             {tile.dosAndDontsOpen ? (
               <div>{this.renderDosDonts(tile.info)}</div>
             ) : null}
+          </div> */}
+
+          <div>
+            <div
+              className="guide-view__modal-header"
+              onClick={this.handleToggleHowToHelpOpen(tile)}
+            >
+              {"How To Help"}
+              {tile.howToHelpOpen ? (
+                <IonIcon
+                  className="guide-view__modal-caret "
+                  icon={arrowDown}
+                />
+              ) : (
+                <IonIcon
+                  className="guide-view__modal-caret "
+                  icon={arrowBack}
+                />
+              )}
+            </div>
+            {tile.howToHelpOpen ? (
+              <div>{this.renderHowToHelp(tile.info)}</div>
+            ) : null}
           </div>
+
+
           {/* <div>
             <div className="guide-view__modal-header" onClick={this.handleToggleResourcesRelevantOpen(tile)}>
               Relevant Resources
@@ -291,49 +319,55 @@ export default class GuideView extends React.Component<ViewProps> {
     return <InformationModal header={header} body={body} />
   }
 
-  private renderDosDonts(tile: GuideTileInfo) {
-    const slides = tile.dosDonts.map((item, idx) => {
-      const doBull = item.doBullets.map((d, num) => {
-        return (
-          <li key={num} className="guide-view__modal-bullets">
-            {d}
-          </li>
-        );
-      });
-      const dontBull = item.dontBullets.map((d, num) => {
-        return (
-          <li key={num} className="guide-view__modal-bullets">
-            {d}
-          </li>
-        );
-      });
-      return (
-        <div key={idx}>
-          <div className="guide-view__modal-text guide-view__do">
-            <div>
-              <div className="guide-view__modal-subheader">Do</div>
-              {item.do}
-            </div>
-            <ul>{doBull}</ul>
-            {item.doLast !== undefined ? (
-              <TextBlock input={item.doLast} />
-            ) : null}
-          </div>
-          <div className="guide-view__modal-text guide-view__dont">
-            <div>
-              <div className="guide-view__modal-subheader">Don't</div>
-              {item.dont}
-            </div>
-            <ul>{dontBull}</ul>
-          </div>
-        </div>
-      );
-    });
-
-    return <div>{slides}</div>;
+  private renderHowToHelp(tile: GuideTileInfo) {
+    return (
+      <HowToHelp description={tile.howToHelp.description} body={tile.howToHelp.bullets} />
+    )
   }
 
-  //Removal of Relevant resources from guide page
+  // private renderDosDonts(tile: GuideTileInfo) {
+  //   const slides = tile.dosDonts.map((item, idx) => {
+  //     const doBull = item.doBullets.map((d, num) => {
+  //       return (
+  //         <li key={num} className="guide-view__modal-bullets">
+  //           {d}
+  //         </li>
+  //       );
+  //     });
+  //     const dontBull = item.dontBullets.map((d, num) => {
+  //       return (
+  //         <li key={num} className="guide-view__modal-bullets">
+  //           {d}
+  //         </li>
+  //       );
+  //     });
+  //     return (
+  //       <div key={idx}>
+  //         <div className="guide-view__modal-text guide-view__do">
+  //           <div>
+  //             <div className="guide-view__modal-subheader">Do</div>
+  //             {item.do}
+  //           </div>
+  //           <ul>{doBull}</ul>
+  //           {item.doLast !== undefined ? (
+  //             <TextBlock input={item.doLast} />
+  //           ) : null}
+  //         </div>
+  //         <div className="guide-view__modal-text guide-view__dont">
+  //           <div>
+  //             <div className="guide-view__modal-subheader">Don't</div>
+  //             {item.dont}
+  //           </div>
+  //           <ul>{dontBull}</ul>
+  //         </div>
+  //       </div>
+  //     );
+  //   });
+
+  //   return <div>{slides}</div>;
+  // }
+
+  // -- Removal of Relevant resources from guide page
   // private renderResources(tile: GuideTile) {
   //   const resources = this.props.store.data.guideResourceTiles(tile.info);
   //   return (
@@ -380,20 +414,31 @@ export default class GuideView extends React.Component<ViewProps> {
       this.forceUpdate();
     };
   };
+  // @action
+  // private handleToggleDosAndDontsOpen = (tile: GuideTile) => {
+  //   return () => {
+  //     tile.dosAndDontsOpen = !tile.dosAndDontsOpen;
+  //     this.forceUpdate();
+  //   };
+  // };
+  // @action
+  // private handleToggleResourcesRelevantOpen = (tile: GuideTile) => {
+  //   return () => {
+  //     tile.resourcesRelevantOpen = !tile.resourcesRelevantOpen;
+  //     this.forceUpdate();
+  //   };
+  // };
+
+
   @action
-  private handleToggleDosAndDontsOpen = (tile: GuideTile) => {
+  private handleToggleHowToHelpOpen = (tile: GuideTile) => {
     return () => {
-      tile.dosAndDontsOpen = !tile.dosAndDontsOpen;
+      tile.howToHelpOpen = !tile.howToHelpOpen;
       this.forceUpdate();
     };
   };
-  @action
-  private handleToggleResourcesRelevantOpen = (tile: GuideTile) => {
-    return () => {
-      tile.resourcesRelevantOpen = !tile.resourcesRelevantOpen;
-      this.forceUpdate();
-    };
-  };
+
+
   @action
   private handleToggleBodyOpen = (tile: GuideTile) => {
     return () => {

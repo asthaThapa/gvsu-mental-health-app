@@ -110,6 +110,27 @@
             ]
           }
         ],
+        "howToHelp": {
+          "description": "",
+          "bullets": [
+            {
+              "title": "Validating Student Anxiety",
+              "description": "Validate the student’s anxiety by saying things like, \"It sounds like you’re feeling really anxious\", rather than, \"There’s no reason to worry – everything is going to be fine\"."
+            },
+            {
+              "title": "Showing Empathy Towards Student Anxiety",
+              "description": "Show the student empathy by saying things like, \"I’m sorry that you’re feeling so anxious\", rather than, \"Worrying is a waste of time\"."
+            },
+            {
+              "title": "Assisting Students in Self-Help for Anxiety",
+              "description": "Help the student help themself by taking deep breaths together or saying things like, \"What usually works for you when you’re feeling this anxious?\", rather than trying to fix it for them. Remember, it’s not your responsibility to provide treatment or find a \"quick fix\"."
+            },
+            {
+              "title": "Encouraging Utilization of University Resources",
+              "description": "Encourage the student to use the resources available to them. The University Counseling Center offers online screenings and other self-help resources in addition to clinical services. Resources specific to students’ individual needs, including Disability Support Resources, Financial Aid, Tutoring, academic advising, and others, can be found using the Resources button on the home page. If you are still concerned about the student, you can also make a CARE referral through the Dean of Students Office."
+            }
+          ]
+        },
         "body": {
           "header": "Click here if someone is having a panic attack",
           "body": "[header Stay calm]\n- Getting anxious or upset yourself will only exacerbate the situation.\n[header Help the student regulate their breathing]\n-  Model regulated breathing by asking them to slowly breathe in and out with you\n-   Encourage them to breathe in for 4 seconds, hold for 4 seconds, breathe out for 4 seconds, hold for 4 seconds and repeat. This is called box breathing.\n[header Encourage them to use grounding techniques]\n-    Have the student sit down in a chair with their feet on the floor.  Offer the student a glass of water, if able.  One of the following grounding techniques may also be helpful:\n-Ask them to describe an object in the room in great detail.  It might be an object that they hold or one that they can see.\n- Gently encourage them to identify 5 things that they can see, 4 things that they can feel, 3 things that they can hear, 2 things that they can smell, and 1 thing that they can taste as a way to recenter their attention.\n[header Say these reassuring things]\n- You can get through this\n- Just concentrate on your breathing\n- Stay in the present\n- This feeling will not last forever\n- You are safe\n[header Connect with help]\n-    If the student is in need of immediate assistance, connect with available emergency services using the “I Have an Emergency” button below.\n- If the student is not in need of immediate assistance, below are additional campus resources that may be helpful.\n"
@@ -206,7 +227,28 @@
             "dont": "Ignore warning signs of suicide.",
             "dontBullets": []
           }
-        ]
+        ],
+        "howToHelp": {
+          "description": "",
+          "bullets": [
+            {
+              "title": "Checking in with the Student",
+              "description": "Check in on the student by saying things like, “I noticed ___________ and wanted to check in with you”, rather than ignoring warning signs of depression."
+            },
+            {
+              "title": "Showing Empathy and Support",
+              "description": "Show the student empathy by saying things like, “I’m sorry that you’re feeling this way” and “I may not understand what you are going through, but I care”, rather than, “Just focus on the positive; you have so much to be happy for”."
+            },
+            {
+              "title": "Encouraging Self-Help and Support Networks",
+              "description": "Help the student help themself by saying things like, “Is there anything that helps when you’re feeling down?” or “Do you have people who can support you when you’re feeling this way?”, rather than trying to fix it for them. Remember, it’s not your responsibility to provide treatment or a “quick fix”."
+            },
+            {
+              "title": "Promoting Utilization of University Resources",
+              "description": "Encourage the student to use the resources available to them. The University Counseling Center offers online screenings and other self-help resources in addition to clinical services. Resources specific to students’ individual needs, including Disability Support Resources, Financial Aid, Tutoring, academic advising, and others, can be found using the Resources button on the home page. If you are still concerned about the student, you can also make a CARE referral through the Dean of Students Office."
+            }
+          ]
+        }
       },
       {
         "subscript": "maybe",
@@ -290,7 +332,28 @@
             "dont": "Wait to get help.",
             "dontBullets": []
           }
-        ]
+        ],
+        "howToHelp": {
+          "description": "",
+          "bullets": [
+            {
+              "title": "Directly Addressing Concerns of Suicide",
+              "description": "If you have any reason to suspect that a student is feeling suicidal, ALWAYS ask the student directly. You can say things like, \"Are you thinking of killing yourself?\" or \"Has it gotten so bad that you’ve considered suicide?\". If you are unable or too uncomfortable to ask, find someone who can – a student’s life may depend on it."
+            },
+            {
+              "title": "Demonstrating Empathy and Supportive Responses",
+              "description": "Show the student empathy by saying things like, \"Thank you for reaching out to me\" or \"I’m sorry that you’re hurting\", rather than, \"Don’t say that\" or \"Suicide is selfish – think of how badly you’d hurt other people\"."
+            },
+            {
+              "title": "Instilling Hope and Encouragement",
+              "description": "Instill hope by saying things like, \"I know it may not feel like it right now, but this can get better\" or \"I care about you and want you to live\". Hope saves lives."
+            },
+            {
+              "title": "Urgent Action and Resource Connection",
+              "description": "Connect the student with appropriate resources. Do not wait to act. Click the “I Have an Emergency” button below for how to respond to student mental health emergencies day or night, on-campus or off."
+            }
+          ]
+        }
       },
       {
         "subscript": "is",
@@ -389,7 +452,28 @@
             "dont": "Wait to get help.",
             "dontBullets": []
           }
-        ]
+        ],
+        "howToHelp": {
+          "description": "If you or others are in any immediate danger, remove yourself from the situation and contact 911. If you do not believe that there is concern for your or others’ safety, then. . . .",
+          "bullets": [
+            {
+              "title": "Allowing the Student to Share Feelings",
+              "description": "Allow the student to share their feelings, even if you disagree by saying things like, “I hear that you are feeling ____________” rather than, “Don’t say that” or “There’s no reason to be so angry”."
+            },
+            {
+              "title": "Responding Calmly and Setting Limits",
+              "description": "Respond calmly and set limits by saying things like, “I will be willing to speak with you as soon as you lower your voice” or “If you continue to ____________, I will have to ask you to leave the room”, rather than escalating the situation. Avoid arguing, raising your voice, or placing blame or guilt on the student."
+            },
+            {
+              "title": "Remaining Focused on the Situation",
+              "description": "Remain focused on the situation at hand by saying things like, “I will do what I can to address this concern” or directing the student to an administrator or campus resource that can address the issue. Resources specific to students’ needs can be found using the Resources button on the home page."
+            },
+            {
+              "title": "Ensuring Safety and Taking Action",
+              "description": "If you have any concerns for your, the student’s, or others’ immediate or future safety after engaging with the student, call 911 immediately. If there are no safety concerns, you can file a CARE referral through the Dean of Students Office."
+            }
+          ]
+        }
       },
       {
         "subscript": "is exhibiting",
@@ -480,7 +564,28 @@
               "Bizarre or otherwise unusual behavior can be the result of a serious medical or mental health condition.  The sooner that it is recognized and treated, the better for the student."
             ]
           }
-        ]
+        ],
+        "howToHelp": {
+          "description": "",
+          "bullets": [
+            {
+              "title": "Remaining Calm and Gentle",
+              "description": "Remain calm. Speak in a gentle, quiet voice and use short, simple sentences. Avoid panicking as it may escalate the situation."
+            },
+            {
+              "title": "Showing Empathy and Understanding",
+              "description": "Show the student empathy by saying things like, “I don’t know what you’re experiencing. . . Can you describe it to me?” or “I care about you and will do what I can to help”, rather than, “What’s wrong with you?” or “What you’re saying doesn’t make sense”."
+            },
+            {
+              "title": "Focusing on Feelings",
+              "description": "Focus on feelings rather than facts by saying things like, “How are you feeling?” or “What would help you feel better right now?”. Avoid trying to correct misperceptions or statements that may be untrue."
+            },
+            {
+              "title": "Connecting with Support",
+              "description": "Connect the student with someone who can help. If you are concerned that the student is unable to make decisions on their own behalf or is in any danger, click the “I Have an Emergency” button below. If the student is not experiencing an emergency, you can file a CARE referral or refer the student to the University Counseling Center for additional support."
+            }
+          ]
+        }
       }
     ],
     "otherwiseOfConcern": {
