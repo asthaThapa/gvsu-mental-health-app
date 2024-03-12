@@ -15,17 +15,18 @@ export default class BulletModalButton extends React.Component<Props> {
     @observable private modalVisible: boolean = false
 
     public render() {
-        return (<>
-            <Button onClick={this.handleOpenModal} fillWidth={true}>
-                {this.props.header}
-            </Button>
-            {this.modalVisible ?
-                <div className="emergency-modal-content">
-                    <BulletModal modalHeader={this.props.header} modalContent={this.props.content} onToggleVisible={this.handleToggleModalVisible} />
-                </div>
-                : null
-            }
-        </>
+        return (
+            <div>
+                <Button className="emergencySectionButton" onClick={this.handleOpenModal} fillWidth={true}>
+                    <span className="buttonText">{this.props.header}</span>
+                </Button>
+                {this.modalVisible ?
+                    <div className="emergency-modal-content">
+                        <BulletModal modalHeader={this.props.header} modalContent={this.props.content} onToggleVisible={this.handleToggleModalVisible} />
+                    </div>
+                    : null
+                }
+            </div>
         )
     }
 

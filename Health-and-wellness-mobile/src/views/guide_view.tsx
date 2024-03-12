@@ -171,7 +171,7 @@ export default class GuideView extends React.Component<ViewProps> {
               )}
             </div>
             {tile.howToHelpOpen ? (
-              <div>{this.renderHowToHelp(tile.info)}</div>
+              <div className='howToHelpDiv'>{this.renderHowToHelp(tile.info)}</div>
             ) : null}
           </div>
 

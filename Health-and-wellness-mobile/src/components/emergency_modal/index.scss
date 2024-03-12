@@ -11,9 +11,9 @@ ion-modal.stack-modal {
     flex-direction: column;
     height: 100%;
     padding: 0 1.5em;
-    overflow: auto;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    margin: 0 0 2em 0;
 }
 
 .emergency-modal__section {
@@ -44,4 +44,14 @@ ion-modal.stack-modal {
 .emergency-modal modal-wrapper {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+}
+
+.buttonText {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.emergencySectionButton {
+    width: 75%;
+    margin: auto;
 }

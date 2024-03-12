@@ -11,21 +11,44 @@
 // }
 
 .information-container {
-    display: flex;
     flex-direction: column;
-    padding: 0.5em 2em 1em 2em;
+    padding: 0.5em;
     overflow: auto;
-    width: fit-content;
-    min-width: 250px;
-    height: fit-content;
-    border-radius: 6px;
-    box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+.information-container ion-card {
+    box-shadow: none;
+    font-family: Montserrat;
+    margin-top: 5px !important;
+}
+
+.information-container ion-card-header {
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #e1e6e8;
+}
+
+.information-container ion-card-content {
+    padding: 5px;
+}
+
+.informationHeader {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #0065A4;
+    text-align: left;
+}
+
+.informationContent {
+    font-size: 1em;
+    text-align: justify;
 }
 
 ion-backdrop {
     background: var(--ion-color-dark);
     opacity: 0.3;
 }
+
 
 .emergency-modal__section {
     margin: 3 * $pad-lg 0;

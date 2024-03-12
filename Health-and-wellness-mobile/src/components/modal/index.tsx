@@ -8,11 +8,9 @@ import {
   IonToolbar,
   IonContent,
 } from '@ionic/react';
-import { close, information } from 'ionicons/icons';
+import { close } from 'ionicons/icons';
 import Button from '../button';
-import 'animate.css';
 import './index.scss';
-import InformationModal from '../information_modal';
 
 export interface ModalProps {
   header: string;
@@ -42,14 +40,15 @@ export default class Modal extends React.Component<ModalProps> {
         className={this.props.classname}
         isOpen={this.props.showModal}
         backdropDismiss={false}
-        initialBreakpoint={this.props.sheetModal ? 0.75 : 0.95}
-        breakpoints={this.props.sheetModal ? [0.75, 0.75, 0.75, 1] : [0.95, 0.35, 0.99, 1]}
+        initialBreakpoint={0.95}
+        breakpoints={[0.95, 0.35, 0.99, 1]}
+        handleBehavior="cycle"
       >
         {!this.props.forceModal ? (
-          <IonHeader className="modal-header-container" collapse="fade">
+          <IonHeader>
             <IonToolbar>
               <IonButtons slot="end" onClick={this.toggleModalVisible(false)}>
-                <Button onClick={this.toggleModalVisible(false)} color='light' fill='clear'>
+                <Button className="modalCloseButton" onClick={this.toggleModalVisible(false)} color='light' fill='clear'>
                   <IonIcon color="primary" icon={close} size={'large'} />
                 </Button>
               </IonButtons>

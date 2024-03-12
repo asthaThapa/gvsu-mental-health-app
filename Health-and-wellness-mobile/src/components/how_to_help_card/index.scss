@@ -1,5 +1,5 @@
 .howToHelpTitle {
-    font-size: 1 rem;
+    font-size: 1.5rem;
     color: #0065A4;
     padding-inline-start: 16px;
     padding-inline-end: 16px;
@@ -8,6 +8,7 @@
 
 .howToHelpCard {
     border-bottom: 1px solid #e1e6e8;
+    flex-direction: column;
 }
 
 .howToHelpContent {
