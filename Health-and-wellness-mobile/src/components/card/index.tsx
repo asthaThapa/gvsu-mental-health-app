@@ -13,6 +13,7 @@ export interface cardProps {
     children?: React.ReactNode
     styledComponents?: Record<string, any>;
     customStyle: boolean
+    emergencyInfo: boolean
 }
 
 export default class Card extends React.Component<cardProps> {
@@ -20,12 +21,13 @@ export default class Card extends React.Component<cardProps> {
     public static defaultProps = {
         stretch: false,
         title: '',
-        customStyle: false
+        customStyle: false,
+        emergencyInfo: false
     }
 
     public render() {
 
-        const { title, stretch, styledComponents, customStyle } = this.props
+        const { title, stretch, styledComponents, customStyle, emergencyInfo } = this.props
 
         var cardClass = classNames('card', [
             {
@@ -35,19 +37,22 @@ export default class Card extends React.Component<cardProps> {
             {
                 name: 'emergency-modal_card',
                 include: customStyle
+            },
+            {
+                name: 'emergency_info_card',
+                include: emergencyInfo
             }
 
         ])
 
         return (
             <IonCard className={cardClass}>
-                <IonCardHeader>
-                    {
-                        title !== '' ?
-                            <IonCardTitle>{title}</IonCardTitle>
-                            : null
-                    }
-                </IonCardHeader>
+                {
+                    title !== '' ?
+                        <IonCardHeader>
+                            <IonCardTitle>{title}</IonCardTitle>  </IonCardHeader>
+                        : null
+                }
                 <IonCardContent>
                     {styledComponents ? this.renderStyledComponents(styledComponents) : this.props.children}
                 </IonCardContent>
