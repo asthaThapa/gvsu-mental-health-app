@@ -100,7 +100,7 @@ export default class ResourceCard extends React.Component<ResourceCardProps> {
               <IonCol size="auto">
                 <IonChip className="subresource_chip" color="primary">
                   <IonIcon icon={call}></IonIcon>
-                  <IonLabel>{item.phone}</IonLabel>
+                  <IonLabel><a href={`tel:${item.phone}`}>{item.phone}</a></IonLabel>
                 </IonChip>
               </IonCol> : null
             }

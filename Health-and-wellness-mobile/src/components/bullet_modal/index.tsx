@@ -62,7 +62,7 @@ export default class BulletModal extends React.Component<Props> {
                     <Card
                         stretch={false}
                         styledComponents={components}
-                        customStyle={true}
+                        emergencyInfo={true}
                     />
 
                 </div>
