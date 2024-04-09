@@ -36,10 +36,18 @@ ion-button {
     height: 75px;
 }
 
+.footer-elements {
+    margin-bottom: 20px !important;
+}
+
 .view-emergency .button-wrapper .emergencyIcon {
     width: 38px;
     height: 38px;
     flex-shrink: 0;
+}
+
+.chatbotButton {
+    width: 200px
 }
 
 .emergencyText {

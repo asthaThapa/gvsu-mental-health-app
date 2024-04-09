@@ -1,0 +1,133 @@
+@import '../../theme/theme.scss';
+
+ion-modal.stack-modal {
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+}
+
+.chatbot-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    margin: 15px;
+}
+
+.chatbotButton {
+    --background: #d9e7ff;
+    --border-radius: 90%;
+    width: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 90%;
+}
+
+.chatbotButton .chatbotIcon {
+    color: #0065A4;
+    width: 300px;
+}
+
+.chatbotButton:active {
+    --background-activated: #d9e7ff;
+}
+
+.chat-bot-reply {
+    background: #d9e7ff;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+.bot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.bot-icon {
+    max-width: 100%;
+}
+
+.user-input {
+    background: #d9e7ff;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 10px;
+}
+
+.user-input-container {
+    align-self: flex-end;
+}
+
+.chat-grid-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 90vh;
+
+    @media (max-width: 768px) {
+        min-height: calc(100vh - 56px);
+    }
+
+    @media (max-width: 480px) {
+        min-height: calc(100vh - 112px);
+    }
+
+}
+
+.chat-content {
+    flex-grow: 1;
+    /* Allow the content to grow */
+}
+
+.emergency-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 1.5em;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: 0 0 2em 0;
+    height: fit-content;
+}
+
+.emergency-modal__section {
+    margin: 3 * $pad-lg 0;
+}
+
+.emergency-modal__header {
+    margin: $pad-lg 0;
+    @include font-sub-header();
+    color: unset;
+}
+
+.emergency-modal__description {
+    margin: $pad-lg 0;
+    @include font-description();
+    font-weight: 200;
+}
+
+.emergency-phone {
+    width: 50%;
+    margin: auto;
+}
+
+.emergency-modal_card ion-card-header {
+    padding: 0px;
+}
+
+.emergency-modal modal-wrapper {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.buttonText {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.emergencySectionButton {
+    width: 75%;
+    margin: auto;
+}

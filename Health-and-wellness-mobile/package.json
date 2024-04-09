@@ -25,6 +25,7 @@
     "firebase": "^10.5.2",
     "fs": "0.0.1-security",
     "ionicons": "^7.0.0",
+    "langchain": "^0.1.32",
     "mobx": "^6.10.2",
     "mobx-persist": "^0.4.1",
     "mobx-react": "9.0.1",

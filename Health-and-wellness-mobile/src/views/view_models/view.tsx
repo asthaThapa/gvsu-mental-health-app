@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { IonToolbar, IonHeader, IonPage, IonContent, IonTitle } from '@ionic/react'
+import { IonToolbar, IonHeader, IonPage, IonContent, IonTitle, IonIcon } from '@ionic/react'
 import { inject } from 'mobx-react'
 import Store from '../../stores/store'
 import EmergencyButton from '../../components/emergency_button'
+import ChatBotButton from '../../components/chatButton'
 import Modal from '../../components/modal'
 import LoginView from '../login_view'
 import { FirebaseContext } from '../../components/firebase'
@@ -35,9 +36,9 @@ export default class View extends React.Component<ViewProps> {
                     </IonToolbar>
                 </IonHeader>
                 <IonContent >
-                  <div className="view-body">
-                    {body}
-                  </div>
+                    <div className="view-body">
+                        {body}
+                    </div>
                 </IonContent>
                 {/* <FirebaseContext.Consumer>
                     {firebase =>
@@ -46,19 +47,26 @@ export default class View extends React.Component<ViewProps> {
                         </Modal>
                     }
                 </FirebaseContext.Consumer> */}
+                <div className="footer-elements">
                     <div className="view-emergency">
                         <EmergencyButton />
                     </div>
-                <div className="view-footer">
-                    <span>University Counseling <br /> Center Information</span>
+                    <div className="view-footer">
+                        <span>University Counseling <br /> Center Information</span>
+                    </div>
                 </div>
+
+                <div className="chatbot-wrapper">
+                    <ChatBotButton />
+                </div>
+
             </IonPage>
         )
     }
 
     //private toggleLoginModal = () => {
-        //const { store } = this.props
-        //store.preferences.loginUser()
-        //this.forceUpdate()
+    //const { store } = this.props
+    //store.preferences.loginUser()
+    //this.forceUpdate()
     //}
 }
