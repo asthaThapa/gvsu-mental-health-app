@@ -85,18 +85,40 @@ export default class InformationModal extends React.Component<Props> {
     }
 
     public getDescription = (description: string) => {
-        const descriptionLine = description.split('\n');
-
+        const descriptionLines = description.split('\n');
         return (
             <div>
-                <span>{descriptionLine[0]}</span>
                 <ul>
-                    {descriptionLine.slice(1).map((line, index) => (
-                        <li key={index}>{line.replaceAll("-", "").trim()}</li>
-                    ))}
+                    {descriptionLines.slice(0).map((line, index) => {
+                        const linkStartIndex = line.indexOf("[link");
+                        const linkEndIndex = line.indexOf("]", linkStartIndex);
+
+                        let linkDest = line.substr(
+                            line.indexOf('[') + 5,
+                            line.indexOf(']') - (line.indexOf('[') + 5),
+                        );
+                        let linkText = linkDest.substr(13);
+
+                        if (linkDest.includes('placeholder: ')) {
+                            linkText = linkDest.substr(linkDest.indexOf('placeholder: ') + 13);
+                            linkDest = linkDest.substr(0, linkDest.indexOf('placeholder: ') - 2);
+                        }
+                        if (linkDest && linkText) {
+                            return (
+                                <li key={index}>
+                                    {line.substring(0, linkStartIndex).replaceAll("-", "")}
+                                    <a href={linkDest}>{linkText}</a>
+                                    {line.substring(linkEndIndex + 1).trim()}
+                                </li>
+                            );
+                        } else {
+                            return <li key={index}>{line.replaceAll("-", "").trim()}</li>;
+                        }
+                    })}
                 </ul>
             </div>
         );
     };
+
 
 }

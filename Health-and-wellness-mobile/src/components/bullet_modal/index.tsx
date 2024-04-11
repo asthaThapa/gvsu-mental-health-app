@@ -3,9 +3,7 @@ import { inject, observer } from "mobx-react"
 import Modal from "../modal"
 import Store from "../../stores/store"
 import Card from '../card/index';
-import option from '../../assets/icons/emergency/options.png';
-import tip from '../../assets/icons/emergency/tips.png';
-
+import pointIcon from '../../assets/icons/emergency/options.png';
 
 export interface Props {
     onToggleVisible: (visible: boolean) => void
@@ -48,14 +46,17 @@ export default class BulletModal extends React.Component<Props> {
     }
 
     private createCard(cardContent: { [key: string]: { subHeader: string; description: string } }) {
-        const imageArray = [option, tip];
         const cards = Object.entries(cardContent).map(([key, item], index) => {
-            const components = {
-                subheader: item.subHeader,
+
+            const components: { subheader?: string; body: string; isList: boolean; image?: string } = {
                 body: item.description,
-                isList: true,
-                image: imageArray[index]
+                isList: true
             };
+
+            if (item.subHeader !== "(header)") {
+                components.subheader = item.subHeader;
+                components.image = pointIcon;
+            }
 
             return (
                 <div className="emergency-modal__description">

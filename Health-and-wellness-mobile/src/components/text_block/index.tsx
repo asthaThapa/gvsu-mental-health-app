@@ -88,7 +88,7 @@ export default class TextBlock extends React.Component<TextBlockProps> {
           linkText = linkDest.substr(linkDest.indexOf('placeholder: ') + 13);
           linkDest = linkDest.substr(0, linkDest.indexOf('placeholder: ') - 2);
         }
-        link = <a href={linkDest}>{linkText}</a>;
+        link = <a href={linkDest} target="_blank">{linkText}</a>;
       }
 
       if (sec.includes('[video')) {

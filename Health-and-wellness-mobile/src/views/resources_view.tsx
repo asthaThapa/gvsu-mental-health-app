@@ -102,7 +102,7 @@ export default class ResourcesView extends React.Component<Props> {
               <IonButton
                 href="https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2"
                 target="_blank">
-                <span>Create a care report</span>
+                <span>Create a CARE Report</span>
               </IonButton>
             </IonCol>
           </IonRow>
