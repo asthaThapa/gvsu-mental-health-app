@@ -56,24 +56,28 @@ ion-modal.stack-modal {
 }
 
 .user-input-container {
-    align-self: flex-end;
+    // align-self: flex-end;
 }
 
 .chat-grid-container {
-
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 90vh;
+    // justify-content: flex-end;
+    min-height: 82vh;
 
-    @media (max-width: 768px) {
-        min-height: calc(100vh - 56px);
-    }
+    // @media (max-width: 768px) {
+    //     min-height: calc(100vh - 56px);
+    // }
 
-    @media (max-width: 480px) {
-        min-height: calc(100vh - 112px);
-    }
+    // @media (max-width: 480px) {
+    //     min-height: calc(100vh - 112px);
+    // }
 
+}
+
+.send-icon {
+    margin: 10px;
+    width: 30px;
 }
 
 .chat-content {
