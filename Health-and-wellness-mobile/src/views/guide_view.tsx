@@ -19,8 +19,6 @@ import sucidal from '../assets/icons/guide/3.png';
 import threatening from '../assets/icons/guide/4.png';
 import unusalBehavior from '../assets/icons/guide/5.png';
 import otherwise from '../assets/icons/guide/otherwise.png';
-import panic from '../assets/icons/guide/panic.png';
-import { title } from 'process';
 
 const imageArray = [anxious, depressed, sucidal, threatening, unusalBehavior]
 
@@ -78,7 +76,7 @@ export default class GuideView extends React.Component<ViewProps> {
         {this.renderOfConcernTile()}
       </>
     );
-    return <View title="I have a student who...." body={body} route="/home" />;
+    return <View title="I Have a Student who...." body={body} route="/home" />;
   }
 
   private renderGuideTiles() {
@@ -211,7 +209,6 @@ export default class GuideView extends React.Component<ViewProps> {
   private renderOfConcernTile() {
     const tile = this.props.store.data.ofConcernTile;
     const buttons = this.ofConcernTiles.map((item, idx) => {
-      var modalBody = this.renderInformationModel(item.info.header, item.info.body);
       return (
         <ScrollTile
           open={item.open}
@@ -221,7 +218,7 @@ export default class GuideView extends React.Component<ViewProps> {
           onClick={this.handleToggleInnerConcern(item)}
         >
           <div className="faq-view__dropdown">
-            {modalBody}
+            <TextBlock input={item.info.body} />
           </div>
         </ScrollTile>
       );

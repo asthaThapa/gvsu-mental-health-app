@@ -2,7 +2,7 @@
   "home": {
     "tiles": [
       {
-        "label": "I have a student I am concerned about",
+        "label": "I Have a Student I Am Concerned About",
         "link": "/guide"
       },
       {
@@ -36,7 +36,7 @@
           },
           {
             "name": "Dean of Students",
-            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://www.gvsu.edu/care/, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate . If the student is feeling suicidal or otherwise in crisis, please click the “I Have An Emergency” button. "
+            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate . If the student is feeling suicidal or otherwise in crisis, please click the “I Have An Emergency” button. "
           },
           {
             "name": "Disability Support Resources",
@@ -114,30 +114,30 @@
           "description": "",
           "bullets": [
             {
-              "title": "Validating Student Anxiety",
+              "title": "Validate the Student’s Anxiety",
               "description": "Validate the student’s anxiety by saying things like, \"It sounds like you’re feeling really anxious\", rather than, \"There’s no reason to worry – everything is going to be fine\"."
             },
             {
-              "title": "Showing Empathy Towards Student Anxiety",
+              "title": "Show Empathy",
               "description": "Show the student empathy by saying things like, \"I’m sorry that you’re feeling so anxious\", rather than, \"Worrying is a waste of time\"."
             },
             {
-              "title": "Assisting Students in Self-Help for Anxiety",
+              "title": "Help the Student Help Themselves",
               "description": "Help the student help themself by taking deep breaths together or saying things like, \"What usually works for you when you’re feeling this anxious?\", rather than trying to fix it for them. Remember, it’s not your responsibility to provide treatment or find a \"quick fix\"."
             },
             {
-              "title": "Encouraging Utilization of University Resources",
+              "title": "Share Resources",
               "description": "Encourage the student to use the resources available to them. The University Counseling Center offers online screenings and other self-help resources in addition to clinical services. Resources specific to students’ individual needs, including Disability Support Resources, Financial Aid, Tutoring, academic advising, and others, can be found using the Resources button on the home page. If you are still concerned about the student, you can also make a CARE referral through the Dean of Students Office."
             }
           ]
         },
         "body": {
           "header": "Click here if someone is having a panic attack",
-          "body": "[header Stay calm]\n- Getting anxious or upset yourself will only exacerbate the situation.\n[header Help the student regulate their breathing]\n-  Model regulated breathing by asking them to slowly breathe in and out with you\n-   Encourage them to breathe in for 4 seconds, hold for 4 seconds, breathe out for 4 seconds, hold for 4 seconds and repeat. This is called box breathing.\n[header Encourage them to use grounding techniques]\n-    Have the student sit down in a chair with their feet on the floor.  Offer the student a glass of water, if able.  One of the following grounding techniques may also be helpful:\n-Ask them to describe an object in the room in great detail.  It might be an object that they hold or one that they can see.\n- Gently encourage them to identify 5 things that they can see, 4 things that they can feel, 3 things that they can hear, 2 things that they can smell, and 1 thing that they can taste as a way to recenter their attention.\n[header Say these reassuring things]\n- You can get through this\n- Just concentrate on your breathing\n- Stay in the present\n- This feeling will not last forever\n- You are safe\n[header Connect with help]\n-    If the student is in need of immediate assistance, connect with available emergency services using the “I Have an Emergency” button below.\n- If the student is not in need of immediate assistance, below are additional campus resources that may be helpful.\n"
+          "body": "[header Stay calm]\n- Getting anxious or upset yourself will only exacerbate the situation.\n[header Help the student regulate their breathing]\n-  Model regulated breathing by asking them to slowly breathe in and out with you\n-   Encourage them to breathe in for 4 seconds, hold for 4 seconds, breathe out for 4 seconds, hold for 4 seconds and repeat. This is called box breathing.\n[header Encourage them to use grounding techniques]\n-    Have the student sit down in a chair with their feet on the floor.  Offer the student a glass of water, if able.  One of the following grounding techniques may also be helpful:\n-Ask them to describe an object in the room in great detail.  It might be an object that they hold or one that they can see.\n- Gently encourage them to identify 5 things that they can see, 4 things that they can feel, 3 things that they can hear, 2 things that they can smell, and 1 thing that they can taste as a way to recenter their attention.\n[header Say these reassuring things]\n-    You can get through this\n- Just concentrate on your breathing\n- Stay in the present\n- This feeling will not last forever\n- You are safe\n[header Connect with help]\n-    If the student is in need of immediate assistance, connect with available emergency services using the “I Have an Emergency” button below.\n- If the student is not in need of immediate assistance, additional resources that may be helpful can be found on the [link /home, placeholder: Home Page].”\n"
         }
       },
       {
-        "subscript": "maybe",
+        "subscript": "may be",
         "label": "Depressed",
         "description": "[picture depression]\nMost of us feel down sometimes – it might be when someone has hurt our feelings, or after a breakup or the loss of a loved one.  Usually, those feelings are manageable or go away with time.  Depression, though, is more than just having “the blues” for a few days.  Depression is a persistent feeling of sadness, apathy, or hopelessness, and it isn’t always in response to something bad that’s happened.  Many people feel depressed despite the positive things in their lives.  Depression can impact the way people feel, as well as the way that they think and the things that they do – often in ways that feel outside of their control.\nThere are different forms of depression, such as seasonal depression, dysthymia, postpardum depression, and bipolar disorder.  It is important to remember depression may present differently in different people.",
         "resourcesRelevant": [
@@ -147,7 +147,7 @@
           },
           {
             "name": "Dean of Students",
-            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://www.gvsu.edu/care/, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate.  If the student is feeling suicidal or otherwise in crisis, please click the “I Have An Emergency” button."
+            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate.  If the student is feeling suicidal or otherwise in crisis, please click the “I Have An Emergency” button."
           },
           {
             "name": "Disability Support Resources",
@@ -232,26 +232,26 @@
           "description": "",
           "bullets": [
             {
-              "title": "Checking in with the Student",
+              "title": "Check in with the Student",
               "description": "Check in on the student by saying things like, “I noticed ___________ and wanted to check in with you”, rather than ignoring warning signs of depression."
             },
             {
-              "title": "Showing Empathy and Support",
+              "title": "Show Empathy",
               "description": "Show the student empathy by saying things like, “I’m sorry that you’re feeling this way” and “I may not understand what you are going through, but I care”, rather than, “Just focus on the positive; you have so much to be happy for”."
             },
             {
-              "title": "Encouraging Self-Help and Support Networks",
+              "title": "Help the Student Help Themselves",
               "description": "Help the student help themself by saying things like, “Is there anything that helps when you’re feeling down?” or “Do you have people who can support you when you’re feeling this way?”, rather than trying to fix it for them. Remember, it’s not your responsibility to provide treatment or a “quick fix”."
             },
             {
-              "title": "Promoting Utilization of University Resources",
+              "title": "Share Resources",
               "description": "Encourage the student to use the resources available to them. The University Counseling Center offers online screenings and other self-help resources in addition to clinical services. Resources specific to students’ individual needs, including Disability Support Resources, Financial Aid, Tutoring, academic advising, and others, can be found using the Resources button on the home page. If you are still concerned about the student, you can also make a CARE referral through the Dean of Students Office."
             }
           ]
         }
       },
       {
-        "subscript": "maybe",
+        "subscript": "may be",
         "label": "Suicidal",
         "secundaryBody": "QPR Suicide Prevention Gatekeeper Trainings are held throughout the year and are open to students, faculty, and staff.  Visit the University Counseling Center [link https://www.gvsu.edu/counsel/outreach-and-events-141.htm, placeholder: outreach calendar] for scheduled dates and times.\nTo request a QPR Suicide Prevention Gatekeeper Training for your department or a student, faculty, or staff group, visit the University Counseling Center [link https://www.gvsu.edu/counsel/outreach-141.htm, placeholder: outreach request site].",
         "description": "[picture suicide]\nIn the United States, someone attempts suicide every 27 seconds.  While suicide is the 10th leading cause of death nationally, it is the 2nd leading cause of death among college students – and rates are on the rise.  Suicide may be difficult to talk about, but the warning signs should never be ignored.  Whereas most are not trained to treat those who are experiencing suicidality, anyone can help save a life.",
@@ -262,7 +262,7 @@
           },
           {
             "name": "Dean of Students",
-            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://www.gvsu.edu/care/, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate.  If the student is feeling suicidal or otherwise in crisis, please click the “I Have An Emergency” button."
+            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate.  If the student is feeling suicidal or otherwise in crisis, please click the “I Have An Emergency” button."
           },
           {
             "name": "National Resources",
@@ -337,27 +337,27 @@
           "description": "",
           "bullets": [
             {
-              "title": "Directly Addressing Concerns of Suicide",
+              "title": "Address Your Concerns Directly",
               "description": "If you have any reason to suspect that a student is feeling suicidal, ALWAYS ask the student directly. You can say things like, \"Are you thinking of killing yourself?\" or \"Has it gotten so bad that you’ve considered suicide?\". If you are unable or too uncomfortable to ask, find someone who can – a student’s life may depend on it."
             },
             {
-              "title": "Demonstrating Empathy and Supportive Responses",
+              "title": "Show Empathy",
               "description": "Show the student empathy by saying things like, \"Thank you for reaching out to me\" or \"I’m sorry that you’re hurting\", rather than, \"Don’t say that\" or \"Suicide is selfish – think of how badly you’d hurt other people\"."
             },
             {
-              "title": "Instilling Hope and Encouragement",
+              "title": "Instill Hope",
               "description": "Instill hope by saying things like, \"I know it may not feel like it right now, but this can get better\" or \"I care about you and want you to live\". Hope saves lives."
             },
             {
-              "title": "Urgent Action and Resource Connection",
+              "title": "Act Immediately",
               "description": "Connect the student with appropriate resources. Do not wait to act. Click the “I Have an Emergency” button below for how to respond to student mental health emergencies day or night, on-campus or off."
             }
           ]
         }
       },
       {
-        "subscript": "is",
-        "label": "Threatening or harm Others",
+        "subscript": "IS",
+        "label": "Threatening or may harm others",
         "description": "Campus safety has moved into the foreground at academic institutions across the country.  Recent events and the constant streaming of tragedies from around globe have heightened fears for many.  While it is impossible to accurately predict who might act on concerning behaviors, research has found some commonalities among those who are threatening or might otherwise cause harm to others.  It is important to note that alone, or even in combination, many of the warning signs below are not directly related to risk.  Use your judgement, reach out for help when needed, and err on the side of your safety and the safety of the campus community.",
         "resourcesRelevant": [
           {
@@ -366,7 +366,7 @@
           },
           {
             "name": "Dean of Students",
-            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://www.gvsu.edu/care/, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate. If a student is being threatening or is otherwise a risk to others, please click the “I Have An Emergency” button"
+            "body": "If you have reached out to the student with support and resources and the student is in need of additional assistance, you can file a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate. If a student is being threatening or is otherwise a risk to others, please click the “I Have An Emergency” button"
           },
           {
             "name": "GVPD Non-emergency",
@@ -457,19 +457,19 @@
           "description": "If you or others are in any immediate danger, remove yourself from the situation and contact 911. If you do not believe that there is concern for your or others’ safety, then. . . .",
           "bullets": [
             {
-              "title": "Allowing the Student to Share Feelings",
+              "title": "Allow the Student to Share Their Feelings",
               "description": "Allow the student to share their feelings, even if you disagree by saying things like, “I hear that you are feeling ____________” rather than, “Don’t say that” or “There’s no reason to be so angry”."
             },
             {
-              "title": "Responding Calmly and Setting Limits",
+              "title": "Respond Calmly",
               "description": "Respond calmly and set limits by saying things like, “I will be willing to speak with you as soon as you lower your voice” or “If you continue to ____________, I will have to ask you to leave the room”, rather than escalating the situation. Avoid arguing, raising your voice, or placing blame or guilt on the student."
             },
             {
-              "title": "Remaining Focused on the Situation",
+              "title": "Remain Focused",
               "description": "Remain focused on the situation at hand by saying things like, “I will do what I can to address this concern” or directing the student to an administrator or campus resource that can address the issue. Resources specific to students’ needs can be found using the Resources button on the home page."
             },
             {
-              "title": "Ensuring Safety and Taking Action",
+              "title": "Prioritize Safety",
               "description": "If you have any concerns for your, the student’s, or others’ immediate or future safety after engaging with the student, call 911 immediately. If there are no safety concerns, you can file a CARE referral through the Dean of Students Office."
             }
           ]
@@ -486,7 +486,7 @@
           },
           {
             "name": "Dean of Students",
-            "body": "If you have reached out to the student with support and resource and the student is in need of additional assistance, you can file a [link https://www.gvsu.edu/care/, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate.  If a student is in any immediate danger or you are afraid to leave them alone, please click the “I Have an Emergency” button."
+            "body": "If you have reached out to the student with support and resource and the student is in need of additional assistance, you can file a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].  A member of the Division of Student Affairs will review the report and follow-up as appropriate.  If a student is in any immediate danger or you are afraid to leave them alone, please click the “I Have an Emergency” button."
           },
           {
             "name": "GVPD Non-emergency",
@@ -569,19 +569,19 @@
           "description": "",
           "bullets": [
             {
-              "title": "Remaining Calm and Gentle",
+              "title": "Remain Calm",
               "description": "Remain calm. Speak in a gentle, quiet voice and use short, simple sentences. Avoid panicking as it may escalate the situation."
             },
             {
-              "title": "Showing Empathy and Understanding",
+              "title": "Show Empathy",
               "description": "Show the student empathy by saying things like, “I don’t know what you’re experiencing. . . Can you describe it to me?” or “I care about you and will do what I can to help”, rather than, “What’s wrong with you?” or “What you’re saying doesn’t make sense”."
             },
             {
-              "title": "Focusing on Feelings",
+              "title": "Focus on Feelings",
               "description": "Focus on feelings rather than facts by saying things like, “How are you feeling?” or “What would help you feel better right now?”. Avoid trying to correct misperceptions or statements that may be untrue."
             },
             {
-              "title": "Connecting with Support",
+              "title": "Connect with Support",
               "description": "Connect the student with someone who can help. If you are concerned that the student is unable to make decisions on their own behalf or is in any danger, click the “I Have an Emergency” button below. If the student is not experiencing an emergency, you can file a CARE referral or refer the student to the University Counseling Center for additional support."
             }
           ]
@@ -594,7 +594,7 @@
       "tiles": [
         {
           "header": "I have a student who is NOT COMING TO CLASS",
-          "body": "A student may not be attending class for a variety of reasons – they may be ill, attending to a personal emergency, in the process of withdrawal, or otherwise unable.  If you are concerned about a student who is not attending class, you can do two things:\n- Reach out to the student personally.  Express your concern, share available resources, and work with the student, if appropriate, to transition back to class.\n- File a [link https://www.gvsu.edu/care/, placeholder: CARE Report].  The Student Support Manager will reach out to the student to provide support and resources."
+          "body": "A student may not be attending class for a variety of reasons – they may be ill, attending to a personal emergency, in the process of withdrawal, or otherwise unable.  If you are concerned about a student who is not attending class, you can do two things:\n- Reach out to the student personally.  Express your concern, share available resources, and work with the student, if appropriate, to transition back to class.\n- File a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].  The Student Support Manager will reach out to the student to provide support and resources."
         },
         {
           "header": "I have a student who has shared that they have a DISABILITY",
@@ -768,7 +768,7 @@
     "tiles": [
       {
         "id": "environmentResource",
-        "title": "Environment",
+        "title": "Environmental",
         "img": "resourceEnv",
         "subResources": [
           {
@@ -1074,11 +1074,11 @@
     "tiles": [
       {
         "question": "If a student shares something in confidence, is it ok for me to tell someone else if I am concerned?",
-        "answer": "Because they interact with students regularly, faculty and staff are often the first to notice concerning changes in students’ mood or behavior. It is appropriate to consult with the University Counseling Center about student mental health concerns that arise, especially when those concerns involve student safety. This is not a breach of student confidentiality. Our clinical staff can provide you with information to address the situation. If your attempts are not successful you may file a CARE Report to instigate next steps to ensure student well-being."
+        "answer": "Because they interact with students regularly, faculty and staff are often the first to notice concerning changes in students’ mood or behavior. It is appropriate to consult with the University Counseling Center about student mental health concerns that arise, especially when those concerns involve student safety. This is not a breach of student confidentiality. Our clinical staff can provide you with information to address the situation. If your attempts are not successful, you may file a CARE Report to instigate next steps to ensure student well-being."
       },
       {
         "question": "What is a CARE Report and when should I file one?",
-        "answer": "While attending GVSU, students may experience a variety of concerns, including academic distress, financial insecurity, inability to meet basic needs, physical illness, mental health symptoms, bias incidents, housing instability, relationship difficulties, and disruptive or disturbing behavior, among others. The CARE Team (Coordination, Assistance, Response, and Education) is comprised of professional staff members who support all students through challenges they may experience during their time at GVSU. Please complete a [link https://www.gvsu.edu/care/, placeholder: CARE Report] if the student needs more assistance than you are able to provide."
+        "answer": "While attending GVSU, students may experience a variety of concerns, including academic distress, financial insecurity, inability to meet basic needs, physical illness, mental health symptoms, bias incidents, housing instability, relationship difficulties, and disruptive or disturbing behavior, among others. The CARE Team (Coordination, Assistance, Response, and Education) is comprised of professional staff members who support all students through challenges they may experience during their time at GVSU. Please complete a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report] if the student needs more assistance than you are able to provide."
       },
       {
         "question": "I want to make sure the student I referred is safe/got help. Is this possible?",
@@ -1089,16 +1089,12 @@
         "answer": "Although the University Counseling Center only provides treatment to currently enrolled students, there are many resources available to others who may be struggling with their mental health. For you and other members of the faculty/staff: \n- If there is an immediate threat to self or others, call 911 or GVPD at [phone 616-331-3255].\n- The Human Resources Office offers free mental health services to University employees through Encompass [link https://www.gvsu.edu/hro/].\n For family members or loved ones:\n- If there is an immediate threat to self or others, call 911.\n- For West Michigan mental health resources, visit Psychology Today [link https://www.psychologytoday.com]."
       },
       {
-        "question": "What mental health resources/services does UCC offer?",
-        "answer": "[link https://www.gvsu.edu/counsel, placeholder: The University Counseling Center] offers a variety of services to suit students’ diverse mental health needs. Services are provided at no cost to currently registered GVSU students and include:\n- Short-term individual therapy\n- Unlimited group therapy, including general therapy groups, symptom management groups, and support groups\n- Substance abuse prevention and treatment\n- Community referral \n- Mental health prevention and education\n- Online self-help tools and resources\n- Consultation for concerned students, faculty, and staff"
+        "question": "What mental health resources/services does the UCC offer?",
+        "answer": "[link https://www.gvsu.edu/counsel, placeholder: The University Counseling Center] offers a variety of services to suit students’ diverse mental health needs. Services are provided at no cost to currently registered GVSU students and include:\n- Short-term individual therapy\n- Ongoing group therapy, including general therapy groups, symptom management groups, and support groups\n- Substance abuse prevention and treatment\n- Community referral \n- Mental health prevention and education\n- Online self-help tools and resources\n- Consultation for concerned students, faculty, and staff"
       },
       {
         "question": "How long does it take for a student to be seen at the University Counseling Center?",
         "answer": "All first-time student appointments are scheduled within two business days. These screening appointments assess student concerns, identify risk, and connect students with appropriate services, which may include individual counseling, group counseling, symptom management resources, or referral to a community provider. If referred to individual counseling, appointments are generally scheduled no more than two weeks out. Group counseling is available throughout the semester. If students need to be seen more quickly, a counselor will assist them in finding a provider in the community who may better meet their needs."
-      },
-      {
-        "question": "A student has submitted an assignment/sent me an email with concerning content, and I am reading it from my home/office after-hours:",
-        "answer": "If you receive concerning written communication from a student, consider the following:\n1) Thank the student for reaching out and trusting you enough to share their thoughts/feelings.\n2) Offer support, such as:\n- If appropriate, a meeting or check-in to discuss the student’s concerns\n- Referral to the University Counseling Center for a same-day crisis appointment or screening appointment by calling [phone 616-331-3266] during business hours\n- Reminder to contact 911 or go to a local emergency room if in crisis\n3)  File a [link https://www.gvsu.edu/care/, placeholder: CARE Report] with the Dean of Students Office.  Your report will enable the Care Team to assess risk and take appropriate action.\n4)  Consult with a member of the UCC staff by calling [phone 616-331-3266].\n\nIf you are concerned at any time for the student’s safety or the safety of others, contact 911 immediately. A police officer can perform a welfare check and connect the student with appropriate resources."
       }
     ]
   },
@@ -1113,11 +1109,11 @@
       "content": [
         {
           "subHeader": "Options",
-          "description": "- Assist the student with calling the University Counseling Center [phone 616-331-3255] to schedule an urgent care appointment. Ensure the student indicates that it is an emergency; make arrangements to support the student in keeping the appointment as able/appropriate.\n- Bring the student to the University Counseling Center (link to location) for an urgent care appointment. You can request to speak with the clinician and share what you know before the student is seen, if needed.\n- Call [phone 911] or 988. First responders can assess for danger and direct the student to appropriate resources."
+          "description": "- Assist the student with calling the University Counseling Center at [phone 616-331-3266] to schedule an urgent care appointment. Ensure the student indicates that it is an emergency; make arrangements to support the student in keeping the appointment as able/appropriate.\n- Bring the student to the University Counseling Center (STU 206) for an urgent care appointment. You can request to speak with the clinician and share what you know before the student is seen, if needed.\n- Call [phone 911] or 988. First responders can assess for danger and direct the student to appropriate resources."
         },
         {
           "subHeader": "Tips",
-          "description": "- Assist the student with calling the University Counseling Center [phone 616-331-3255] to schedule an urgent care appointment. Ensure the student indicates that it is an emergency; make arrangements to support the student in keeping the appointment as able/appropriate.\n- Bring the student to the University Counseling Center (link to location) for an urgent care appointment. You can request to speak with the clinician and share what you know before the student is seen, if needed.\n- Call [phone 911] or 988. First responders can assess for danger and direct the student to appropriate resources."
+          "description": "- Remain calm.\n-If you are not in danger, maintain communication with the student. You do not have to fixate on or attempt to solve the crisis. Be supportive and empathetic.\n- Encourage the student to engage in self-care (find a comfortable place to sit, reduce sensory distraction, get something to eat or drink, breathe deeply, etc.).\n- See the appropriate “I Have a Student Who” for additional tips/information."
         }
       ]
     },
@@ -1141,12 +1137,20 @@
       "title": "Received Remotely",
       "content": [
         {
-          "subHeader": "Offer available emergency resources",
+          "subHeader": "(header)",
+          "description": "If you have learned that a student is in crisis via email Blackboard, a submitted assignment, or other means and are not with them to address the crisis in-person:"
+        },
+        {
+          "subHeader": "Reach out:",
+          "description": "- Reach out to the student to establish or maintain communication. Thank them for their honesty and willingness to reach out"
+        },
+        {
+          "subHeader": "Offer resources: ",
           "description": "- 911 or 988 \n- Local emergency room/s \n- Housing staff (RAs, LCDs, and members of the Housing staff can access 24 hour emergency mental health support) \n- The University Counseling Center (screening appointments and same day urgent care appointments are available)"
         },
         {
           "subHeader": "Follow up as needed:",
-          "description": "- Remain calm.\n- If you are not in danger, maintain communication with the student. You do not have to fixate on or attempt to solve the crisis. Be supportive and empathetic.\n- Encourage the student to engage in self-care (find a comfortable place to sit, reduce sensory distraction, get something to eat or drink, breathe deeply, etc.)\n-See the appropriate “I Have a Student Who” for additional tips/information."
+          "description": "- Contact 911 or 988 to request a well-check if you have any concern for the student’s safety.\n- File a [link https://cm.maxient.com/reportingform.php?GrandValley&layout_id=2, placeholder: CARE Report].\n- Reach out to the student in the coming days or weeks to checkin, offer support, etc."
         }
       ],
       "shouldShowCan": false
@@ -1173,7 +1177,7 @@
       },
       {
         "header": "Self Care",
-        "body": "If you have a particularly stressful or difficult lesson planned, encourage students to take part in self-care prior to attending class. \n- Exercise: Exercise is important to both physical and mental health, boosting mood and reducing stress and anxiety.  Not everyone can make it to the gym, but you can encourage students to be active in a way that works for them, such as using online workout videos or exploring the outdoors by foot, wheelchair, bike, or whichever way works best for them! [link https://www.gvsu.edu/rec/, placeholder: Visit Rec and Wellness] for information about staying physically healthy. \n- Sleep: Remind students that sleep is vital to their physical and mental health.  Encourage students to create (and stick to!) a sleep routine.  Sometimes all-nighters can do more harm than good when it comes to retaining information and performing important tasks. The University Counseling Center has information about [link https://www.gvsu.edu/counsel/sleep-313.htm, placeholder: sleep hygiene]. \n- Nutrition: Healthy eating can keep our minds working and alert. There are options on campus to help students eat right for self-care. Remind students to fuel-up with healthy foods before a big test or when they have a long day ahead. Those facing food insecurity can use the on-campus food resource, [link https://www.gvsu.edu/replenish/, placeholder: Replenish], as well! \n- Boundaries: A lot of students struggle to say “no” to family, friends, and opportunities for fun in college. Learning to say no can be difficult, but it is important for students to protect their time and energy. Empower students to say no for self-care! The University Counseling Center has more information about [link https://www.gvsu.edu/counsel/healthy-relationships-309.htm, placeholder: healthy relationships and boundaries]."
+        "body": "If you have a particularly stressful or difficult lesson planned, encourage students to take part in self-care prior to attending class. \n- Exercise: Not everyone can make it to the gym, but you can encourage students to be active in a way that works for them, such as using online workout videos or exploring the outdoors by foot, bike, or wheelchair. [link https://www.gvsu.edu/rec/, placeholder: Visit Rec and Wellness] for information about staying physically healthy. \n- Sleep: Remind students that sleep is vital to their physical and mental health.  Encourage students to create (and stick to!) a sleep routine.  Sometimes all-nighters can do more harm than good when it comes to retaining information and performing important tasks. The University Counseling Center has information about [link https://www.gvsu.edu/counsel/sleep-313.htm, placeholder: sleep hygiene]. \n- Nutrition: Healthy eating can keep our minds working and alert. There are options on campus to help students eat right for self-care. Remind students to fuel-up with healthy foods before a big test or when they have a long day ahead. Those facing food insecurity can use the on-campus food resource, [link https://www.gvsu.edu/replenish/, placeholder: Replenish], as well. \n- Boundaries: A lot of students struggle to say “no” to family, friends, and opportunities for fun in college. Learning to say no can be difficult, but it is important for students to protect their time and energy. Empower students to say no for self-care! The University Counseling Center has more information about [link https://www.gvsu.edu/counsel/healthy-relationships-309.htm, placeholder: healthy relationships and boundaries]."
       }
     ]
   }

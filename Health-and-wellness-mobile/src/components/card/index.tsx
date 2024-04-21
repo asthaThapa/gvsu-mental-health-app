@@ -64,11 +64,11 @@ export default class Card extends React.Component<cardProps> {
         const isList = components.isList ? true : false
         return (
             <div className="styled-card-components">
-                <div {...isList ? { className: 'card-list' } : { className: 'card-description' }}>
-                    <IonImg className="card-image emergency-phone" src={components.image} />
+                <div {...isList && components.image ? { className: 'card-list' } : { className: 'card-description' }}>
+                    {components.image ? <IonImg className="card-image emergency-phone" src={components.image} /> : null}
                     <div {...isList ? { className: 'card-text' } : { className: 'card-description-text' }}>
                         {components.header ? <h1 className='card-header'>{components.header}</h1> : null}
-                        <h2 className='card-subheader'>{components.subheader}</h2>
+                        {components.subheader ? <h2 className='card-subheader'>{components.subheader}</h2> : null}
                     </div>
                 </div>
                 {this.renderDescription(components.body, isList)}
