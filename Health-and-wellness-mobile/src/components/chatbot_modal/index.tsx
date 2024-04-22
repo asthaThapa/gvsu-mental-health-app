@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import { inject, observer } from "mobx-react";
 import Modal from "../modal";
 import Store from "../../stores/store";
@@ -8,6 +8,7 @@ import user from '../../assets/user.png';
 import send from '../../assets/send.png';
 import "./index.scss";
 import { getCohereEmbeds } from "../../retrievalModel";
+import { IonFooter, IonContent } from '@ionic/react'
 
 export interface Props {
     onToggleVisible: (visible: boolean) => void;
@@ -15,7 +16,6 @@ export interface Props {
 }
 
 interface State {
-    userInput: string;
     chatHistory: Array<{ sender: string; message: string }>;
 }
 
@@ -27,10 +27,11 @@ export default class ChatBotModal extends React.Component<Props, State> {
         store: null
     }
 
+    private userInputRef: React.RefObject<HTMLIonInputElement>
+
     constructor(props: Props) {
         super(props);
         this.state = {
-            userInput: "",
             chatHistory: [
                 {
                     sender: "bot",
@@ -38,34 +39,39 @@ export default class ChatBotModal extends React.Component<Props, State> {
                 }
             ]
         };
+        this.userInputRef = createRef<HTMLIonInputElement>();
     }
 
     public render() {
         return (
             <Modal
-                classname="emergency-modal"
+                classname="chatbot-modal"
                 showModal={true}
                 onToggleModalVisible={this.toggleModal}
                 header="Chat"
                 sheetModal={true}
+                contentPage={false}
             >
-                <div className="chat-container">
-                    <IonGrid className="chat-grid-container">
+                <IonContent>
+                    <IonGrid>
                         {this.state.chatHistory.map((item, index) => (
                             <div key={index} className={`${item.sender}-message`}>
-                                {item.sender === "bot" ? this.renderChatBotReply(item.message) : this.renderUserReply(item.message)}
+                                {item.sender === "bot" ?
+                                    this.renderChatBotReply(item.message) :
+                                    this.renderUserReply(item.message)}
                             </div>
                         ))}
                     </IonGrid>
-                </div>
-
-                <div>
-                    <IonGrid>
-                        <IonRow className="user-input-container">
+                </IonContent>
+                <IonFooter>
+                    <IonGrid className="userMessage">
+                        <IonRow>
                             <IonCol>
                                 <IonInput
-                                    value={this.state.userInput}
-                                    onIonChange={(e) => this.setState({ userInput: e.detail.value! })}
+                                    ref={this.userInputRef}
+                                    // onIonChange={(e) => {
+                                    //     console.log("Input value:", e.detail.value);
+                                    // }}
                                     label="Send Message"
                                     labelPlacement="floating"
                                     fill="outline"
@@ -73,11 +79,11 @@ export default class ChatBotModal extends React.Component<Props, State> {
                                 ></IonInput>
                             </IonCol>
                             <IonCol size="auto">
-                                <IonImg className="send-icon" src={send} onClick={this.handleSendMessage} />
+                                <IonImg className="send-icon" src={send} onClick={() => this.handleSendMessage()} />
                             </IonCol>
                         </IonRow>
                     </IonGrid>
-                </div>
+                </IonFooter>
             </Modal>
         )
     }
@@ -88,17 +94,30 @@ export default class ChatBotModal extends React.Component<Props, State> {
         }
     }
 
-    private handleSendMessage = async () => {
-        const { userInput } = this.state;
-        const coherenceResult = await getCohereEmbeds(userInput);
+    private handleSendMessage = () => {
+        const userInput = this.userInputRef.current?.value || "";
         const chatHistoryItem = { sender: "user", message: userInput };
-        const botReplyItem = { sender: "bot", message: coherenceResult.toString() };
-
         this.setState(prevState => ({
-            userInput: "",
-            chatHistory: [...prevState.chatHistory, chatHistoryItem, botReplyItem]
-        }));
+            chatHistory: [...prevState.chatHistory, { ...chatHistoryItem, message: chatHistoryItem.message.toString() }]
+        }), async () => {
+            await this.handleBotReply(userInput.toString());
+            this.userInputRef.current!.value = "";
+        });
     }
+
+    private handleBotReply = async (userInput: string) => {
+        try {
+            const botReply = await getCohereEmbeds(userInput);
+            const botReplyItem = { sender: "bot", message: botReply.toString() };
+
+            this.setState(prevState => ({
+                chatHistory: [...prevState.chatHistory, botReplyItem]
+            }));
+        } catch (error) {
+            console.error("Error fetching bot reply:", error);
+        }
+    }
+
 
     private renderChatBotReply(botReply: string) {
         return (
@@ -127,4 +146,5 @@ export default class ChatBotModal extends React.Component<Props, State> {
             </IonRow>
         )
     }
+
 }

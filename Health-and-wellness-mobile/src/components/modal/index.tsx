@@ -21,6 +21,7 @@ export interface ModalProps {
   classname?: string
   informationModel?: boolean
   sheetModal?: boolean
+  contentPage?: boolean
 }
 
 export default class Modal extends React.Component<ModalProps> {
@@ -31,7 +32,8 @@ export default class Modal extends React.Component<ModalProps> {
     forceModal: false,
     classname: 'modal',
     informationModel: false,
-    sheetModal: false
+    sheetModal: false,
+    contentPage: true
   };
 
   public render() {
@@ -40,8 +42,8 @@ export default class Modal extends React.Component<ModalProps> {
         className={this.props.classname}
         isOpen={this.props.showModal}
         backdropDismiss={false}
-        initialBreakpoint={0.95}
-        breakpoints={[0.95, 0.35, 0.99, 1]}
+        initialBreakpoint={this.props.contentPage ? 0.95 : 1}
+        breakpoints={this.props.contentPage ? [0.95, 0.35, 0.99, 1] : [1, 1, 1, 1]}
         handleBehavior="cycle"
       >
         {!this.props.forceModal ? (
@@ -56,9 +58,13 @@ export default class Modal extends React.Component<ModalProps> {
             </IonToolbar>
           </IonHeader>
         ) : null}
-        <IonContent fullscreen={true} >
-          {this.props.children}
-        </IonContent>
+        {this.props.contentPage ? (
+          <IonContent fullscreen={true}>
+            {this.props.children}
+          </IonContent>
+        ) : (
+          this.props.children
+        )}
       </IonModal>
     );
   }

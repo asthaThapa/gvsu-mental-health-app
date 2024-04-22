@@ -41,7 +41,7 @@ ion-modal.stack-modal {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    // height: 100%;
 }
 
 .bot-icon {
@@ -55,24 +55,8 @@ ion-modal.stack-modal {
     min-height: 10px;
 }
 
-.user-input-container {
-    // align-self: flex-end;
-}
-
-.chat-grid-container {
-    display: flex;
-    flex-direction: column;
-    // justify-content: flex-end;
-    min-height: 82vh;
-
-    // @media (max-width: 768px) {
-    //     min-height: calc(100vh - 56px);
-    // }
-
-    // @media (max-width: 480px) {
-    //     min-height: calc(100vh - 112px);
-    // }
-
+.userMessage {
+    border-top: 0.005rem solid #9a9797;
 }
 
 .send-icon {
@@ -83,47 +67,6 @@ ion-modal.stack-modal {
 .chat-content {
     flex-grow: 1;
     /* Allow the content to grow */
-}
-
-.emergency-modal-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0 1.5em;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin: 0 0 2em 0;
-    height: fit-content;
-}
-
-.emergency-modal__section {
-    margin: 3 * $pad-lg 0;
-}
-
-.emergency-modal__header {
-    margin: $pad-lg 0;
-    @include font-sub-header();
-    color: unset;
-}
-
-.emergency-modal__description {
-    margin: $pad-lg 0;
-    @include font-description();
-    font-weight: 200;
-}
-
-.emergency-phone {
-    width: 50%;
-    margin: auto;
-}
-
-.emergency-modal_card ion-card-header {
-    padding: 0px;
-}
-
-.emergency-modal modal-wrapper {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
 }
 
 .buttonText {
