@@ -69,9 +69,11 @@ export default class ChatBotModal extends React.Component<Props, State> {
                             <IonCol>
                                 <IonInput
                                     ref={this.userInputRef}
-                                    // onIonChange={(e) => {
-                                    //     console.log("Input value:", e.detail.value);
-                                    // }}
+                                    onIonChange={(e) => {
+                                        const inputValue = e.detail.value || ''; // Get the input value or an empty string
+                                        const sanitizedValue = inputValue.replace(/[^a-zA-Z0-9*? ]/g, ''); // Remove special characters except '*', '?', and space
+                                        this.userInputRef.current!.value = sanitizedValue; // Update the input value through the ref
+                                    }}
                                     label="Send Message"
                                     labelPlacement="floating"
                                     fill="outline"
@@ -120,18 +122,69 @@ export default class ChatBotModal extends React.Component<Props, State> {
 
 
     private renderChatBotReply(botReply: string) {
+        const formattedReply = this.formatReply(botReply);
+
         return (
             <IonRow>
                 <IonCol size="auto" className="bot-container">
-                    <IonImg className="bot-icon" src={bot} /></IonCol>
+                    <IonImg className="bot-icon" src={bot} />
+                </IonCol>
                 <IonCol>
                     <div className="chat-bot-reply">
-                        {botReply}
+                        {formattedReply}
                     </div>
                 </IonCol>
             </IonRow>
-        )
+        );
     }
+
+
+    private formatReply(reply: string) {
+        const formattedLinks = [];
+
+        while (reply.includes('[link:')) {
+            const startIndex = reply.indexOf('[link:');
+            const endIndex = reply.indexOf(']', startIndex);
+
+            if (endIndex !== -1) {
+                const linkPart = reply.slice(startIndex + 6, endIndex);
+                const parts = linkPart.split(', placeholder:');
+
+                if (parts.length === 2) {
+                    const url = parts[0].trim();
+                    const text = parts[1].trim();
+
+                    formattedLinks.push({ url, text });
+
+                    reply = reply.slice(0, startIndex) + text + reply.slice(endIndex + 1);
+                } else {
+                    // If the format is not correct, remove the [link:] tag
+                    reply = reply.slice(0, startIndex) + reply.slice(endIndex + 1);
+                }
+            } else {
+                // If there is no closing bracket, remove the [link:] tag
+                reply = reply.slice(0, startIndex) + reply.slice(startIndex + 6);
+            }
+        }
+
+        let formattedReply = reply;
+
+        formattedLinks.forEach(({ url, text }) => {
+            const link = `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+            const index = formattedReply.indexOf(text);
+            if (index !== -1) {
+                formattedReply = formattedReply.slice(0, index) + link + formattedReply.slice(index + text.length);
+            }
+        });
+
+        return (
+            <div className="formatted-reply" dangerouslySetInnerHTML={{ __html: formattedReply }} />
+        );
+    }
+
+
+
+
 
     private renderUserReply(userReply: string) {
         return (
