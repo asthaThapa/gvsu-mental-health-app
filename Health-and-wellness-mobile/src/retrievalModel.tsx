@@ -1,8 +1,11 @@
 import { CohereEmbeddings } from "@langchain/cohere";
 import { Pinecone } from '@pinecone-database/pinecone';
 
+const cohereApiKey = process.env.REACT_APP_COHEREAPI;
+const pineConeApiKey = process.env.REACT_APP_PINECONEAPI;
+
 const pinecone = new Pinecone({
-    apiKey: '0e5085ac-6c93-440c-9102-a504358e2f5a'
+    apiKey: pineConeApiKey || ''
 });
 
 const index_name = 'mentalhealth-embeddings';
@@ -11,7 +14,7 @@ const index = pinecone.Index(index_name);
 const embeddingTool = new CohereEmbeddings({
     model: "embed-english-v3.0",
     inputType: "search_query",
-    apiKey: "XajXDwqxrGS3UX9mJq5FhInQb0FK6ICkgzgrjgRK"
+    apiKey: cohereApiKey || ''
 });
 
 

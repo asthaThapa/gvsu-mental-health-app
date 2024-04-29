@@ -43,6 +43,10 @@ export default class ChatBotModal extends React.Component<Props, State> {
     }
 
     public render() {
+        const inputValue = (this.userInputRef.current && this.userInputRef.current.value) || '';
+        const sanitizedValue = typeof inputValue === 'string' ? inputValue.replace(/[^a-zA-Z0-9*? ]/g, '') : inputValue;
+        const isTyping = (typeof sanitizedValue === 'string' && sanitizedValue.trim().length > 0) || false;
+
         return (
             <Modal
                 classname="chatbot-modal"
@@ -81,7 +85,10 @@ export default class ChatBotModal extends React.Component<Props, State> {
                                 ></IonInput>
                             </IonCol>
                             <IonCol size="auto">
-                                <IonImg className="send-icon" src={send} onClick={() => this.handleSendMessage()} />
+                                <IonImg className="send-icon"
+                                    src={send}
+                                    onClick={() => !isTyping && this.handleSendMessage()}
+                                />
                             </IonCol>
                         </IonRow>
                     </IonGrid>
